@@ -4,7 +4,6 @@
 
   $ci =& get_instance();
   $class = strtolower($ci->router->fetch_class());
-  $method = strtolower($ci->router->fetch_method());
   $segment1 = $ci->uri->segment(1);
 
   // Determine active tab
@@ -113,8 +112,7 @@
     <div class="container d-flex align-items-center justify-content-between">
       <!-- Brand Logo -->
       <a href="<?= site_url() ?>" class="brand-wrap">
-        <img src="<?= base_url() ?>assets/images/logo/logo.png" alt="<?= $company3 ?> Packers and Movers"
-          class="brand-logo">
+        <img src="<?= base_url() ?>assets/images/logo/logo.png" alt="<?= $company3 ?>" class="brand-logo" loading="lazy">
       </a>
 
       <!-- Desktop Navigation Menu -->
@@ -122,48 +120,51 @@
         itemtype="https://schema.org/SiteNavigationElement">
         <a itemprop="url" href="<?= site_url() ?>" class="nav-link<?= $active_tab === 'home' ? ' active' : '' ?>"><span
             itemprop="name">Home</span></a>
+            
         <div class="nav-item dropdown">
           <a href="<?= site_url('about-us') ?>"
             class="nav-link dropdown-toggle<?= $active_tab === 'about' ? ' active' : '' ?>">About Us <i
               class="bi bi-chevron-down ms-1"></i></a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item<?= $segment1 === 'about-us' ? ' active' : '' ?>"
-                href="<?= site_url('about-us') ?>">About Us</a></li>
+                href="<?= site_url('about-us') ?>"><i class="bi bi-people me-2"></i> About Us</a></li>
             <li><a class="dropdown-item<?= $segment1 === 'why-choose-us' ? ' active' : '' ?>"
-                href="<?= site_url('why-choose-us') ?>">Why Choose Us</a></li>
+                href="<?= site_url('why-choose-us') ?>"><i class="bi bi-check-circle me-2"></i> Why Choose Us</a></li>
             <li><a class="dropdown-item<?= $segment1 === 'faqs' ? ' active' : '' ?>"
-                href="<?= site_url('faqs') ?>">FAQ</a></li>
+                href="<?= site_url('faqs') ?>"><i class="bi bi-question-circle me-2"></i> FAQ</a></li>
             <li><a class="dropdown-item<?= $segment1 === 'testimonials' ? ' active' : '' ?>"
-                href="<?= site_url('testimonials') ?>">Testimonial</a></li>
+                href="<?= site_url('testimonials') ?>"><i class="bi bi-chat-left-quote me-2"></i> Testimonial</a></li>
           </ul>
         </div>
+        
         <div class="nav-item dropdown">
           <a href="<?= site_url('our-services') ?>"
             class="nav-link dropdown-toggle<?= $active_tab === 'services' ? ' active' : '' ?>">Services <i
               class="bi bi-chevron-down ms-1"></i></a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item<?= $segment1 === 'home-relocation' ? ' active' : '' ?>"
-                href="<?= site_url('home-relocation') ?>">Home Relocation</a></li>
+                href="<?= site_url('home-relocation') ?>"><i class="bi bi-house-door me-2"></i> Home Relocation</a></li>
             <li><a class="dropdown-item<?= $segment1 === 'office-relocation' ? ' active' : '' ?>"
-                href="<?= site_url('office-relocation') ?>">Office Relocation</a></li>
+                href="<?= site_url('office-relocation') ?>"><i class="bi bi-building me-2"></i> Office Relocation</a></li>
             <li><a class="dropdown-item<?= $segment1 === 'packing-and-unpacking' ? ' active' : '' ?>"
-                href="<?= site_url('packing-and-unpacking') ?>">Packing &amp; Unpacking</a></li>
+                href="<?= site_url('packing-and-unpacking') ?>"><i class="bi bi-box-seam me-2"></i> Packing &amp; Unpacking</a></li>
             <li><a class="dropdown-item<?= $segment1 === 'loading-and-unloading' ? ' active' : '' ?>"
-                href="<?= site_url('loading-and-unloading') ?>">Loading &amp; Unloading</a></li>
+                href="<?= site_url('loading-and-unloading') ?>"><i class="bi bi-truck-flatbed me-2"></i> Loading &amp; Unloading</a></li>
             <li><a class="dropdown-item<?= $segment1 === 'household-shifting' ? ' active' : '' ?>"
-                href="<?= site_url('household-shifting') ?>">Household Shifting</a></li>
+                href="<?= site_url('household-shifting') ?>"><i class="bi bi-house-heart me-2"></i> Household Shifting</a></li>
             <li><a class="dropdown-item<?= $segment1 === 'bike-transportation' ? ' active' : '' ?>"
-                href="<?= site_url('bike-transportation') ?>">Bike Transportation</a></li>
+                href="<?= site_url('bike-transportation') ?>"><i class="bi bi-bicycle me-2"></i> Bike Transportation</a></li>
             <li><a class="dropdown-item<?= $segment1 === 'car-transportation' ? ' active' : '' ?>"
-                href="<?= site_url('car-transportation') ?>">Car Transportation</a></li>
+                href="<?= site_url('car-transportation') ?>"><i class="bi bi-car-front me-2"></i> Car Transportation</a></li>
             <li><a class="dropdown-item<?= $segment1 === 'warehouse-storage' ? ' active' : '' ?>"
-                href="<?= site_url('warehouse-storage') ?>">Warehouse Storage</a></li>
+                href="<?= site_url('warehouse-storage') ?>"><i class="bi bi-building-down me-2"></i> Warehouse Storage</a></li>
             <li><a class="dropdown-item<?= $segment1 === 'door-to-door-shifting' ? ' active' : '' ?>"
-                href="<?= site_url('door-to-door-shifting') ?>">Door-to-Door Shifting</a></li>
+                href="<?= site_url('door-to-door-shifting') ?>"><i class="bi bi-door-open me-2"></i> Door-to-Door Shifting</a></li>
             <li><a class="dropdown-item<?= $segment1 === 'cargo-services' ? ' active' : '' ?>"
-                href="<?= site_url('cargo-services') ?>">Cargo Services</a></li>
+                href="<?= site_url('cargo-services') ?>"><i class="bi bi-globe-americas me-2"></i> Cargo Services</a></li>
           </ul>
         </div>
+        
         <a href="<?= site_url('our-branches') ?>"
           class="nav-link<?= $active_tab === 'locations' ? ' active' : '' ?>">Locations</a>
         <a href="<?= site_url('blog') ?>" class="nav-link<?= $active_tab === 'blog' ? ' active' : '' ?>">Blog</a>
@@ -198,134 +199,128 @@
     </button>
 
     <div class="mega-inner">
+      <!-- Top Brand Card -->
+      <div class="mega-brand-card">
+        <img src="<?= base_url() ?>assets/images/logo/logo.png" alt="<?= $company3 ?>" class="mega-logo">
+        <h3 class="brand-title"><?= $company3 ?></h3>
+        <p>Premium & trusted packers and movers service. Shifting made easy and secure.</p>
+        <div class="mega-call-btn-container">
+          <a href="<?= $phonehtml ?>" class="mega-call-primary">
+            <i class="bi bi-telephone-fill"></i> Call: <?= $phone ?>
+          </a>
+          <?php if (!empty($phone1)): ?>
+          <a href="<?= $phonehtml1 ?>" class="mega-call-primary">
+            <i class="bi bi-telephone-fill"></i> Call: <?= $phone1 ?>
+          </a>
+          <?php endif; ?>
+          <a href="<?= $megaWhatsappLink ?>" target="_blank" rel="noopener" class="mega-call-secondary">
+            <i class="bi bi-whatsapp"></i> Chat on WhatsApp
+          </a>
+        </div>
+      </div>
 
       <!-- Navigation Accordion -->
       <div class="mobile-nav-list">
         <div class="mobile-nav-item<?= $active_tab === 'home' ? ' active' : '' ?>">
-          <a href="<?= site_url() ?>" class="mobile-nav-link">Home</a>
+          <a href="<?= site_url() ?>" class="mobile-nav-link"><i class="bi bi-house-door me-2"></i> Home</a>
         </div>
 
         <div class="mobile-nav-item mobile-dropdown<?= $active_tab === 'about' ? ' active' : '' ?>">
           <button class="mobile-nav-link mobile-dropdown-toggle">
-            <span>About Us</span>
+            <span><i class="bi bi-info-circle me-2"></i> About Us</span>
             <i class="bi bi-chevron-down toggle-icon"></i>
           </button>
           <div class="mobile-dropdown-menu">
-            <a href="<?= site_url('about-us') ?>" class="<?= $segment1 === 'about-us' ? 'active' : '' ?>">About Us</a>
-            <a href="<?= site_url('why-choose-us') ?>" class="<?= $segment1 === 'why-choose-us' ? 'active' : '' ?>">Why
-              Choose Us</a>
-            <a href="<?= site_url('faqs') ?>" class="<?= $segment1 === 'faqs' ? 'active' : '' ?>">FAQ</a>
+            <a href="<?= site_url('about-us') ?>" class="<?= $segment1 === 'about-us' ? 'active' : '' ?>"><i class="bi bi-people me-2"></i> About Us</a>
+            <a href="<?= site_url('why-choose-us') ?>" class="<?= $segment1 === 'why-choose-us' ? 'active' : '' ?>"><i class="bi bi-check-circle me-2"></i> Why Choose Us</a>
+            <a href="<?= site_url('faqs') ?>" class="<?= $segment1 === 'faqs' ? 'active' : '' ?>"><i class="bi bi-question-circle me-2"></i> FAQ</a>
             <a href="<?= site_url('testimonials') ?>"
-              class="<?= $segment1 === 'testimonials' ? 'active' : '' ?>">Testimonial</a>
+              class="<?= $segment1 === 'testimonials' ? 'active' : '' ?>"><i class="bi bi-chat-left-quote me-2"></i> Testimonial</a>
           </div>
         </div>
 
         <div class="mobile-nav-item mobile-dropdown<?= $active_tab === 'services' ? ' active' : '' ?>">
           <button class="mobile-nav-link mobile-dropdown-toggle">
-            <span>Services</span>
+            <span><i class="bi bi-gear me-2"></i> Services</span>
             <i class="bi bi-chevron-down toggle-icon"></i>
           </button>
           <div class="mobile-dropdown-menu">
             <a href="<?= site_url('home-relocation') ?>"
-              class="<?= $segment1 === 'home-relocation' ? 'active' : '' ?>">Home Relocation</a>
+              class="<?= $segment1 === 'home-relocation' ? 'active' : '' ?>"><i class="bi bi-house-door me-2"></i> Home Relocation</a>
             <a href="<?= site_url('office-relocation') ?>"
-              class="<?= $segment1 === 'office-relocation' ? 'active' : '' ?>">Office Relocation</a>
+              class="<?= $segment1 === 'office-relocation' ? 'active' : '' ?>"><i class="bi bi-building me-2"></i> Office Relocation</a>
             <a href="<?= site_url('packing-and-unpacking') ?>"
-              class="<?= $segment1 === 'packing-and-unpacking' ? 'active' : '' ?>">Packing &amp; Unpacking</a>
+              class="<?= $segment1 === 'packing-and-unpacking' ? 'active' : '' ?>"><i class="bi bi-box-seam me-2"></i> Packing &amp; Unpacking</a>
             <a href="<?= site_url('loading-and-unloading') ?>"
-              class="<?= $segment1 === 'loading-and-unloading' ? 'active' : '' ?>">Loading &amp; Unloading</a>
+              class="<?= $segment1 === 'loading-and-unloading' ? 'active' : '' ?>"><i class="bi bi-truck-flatbed me-2"></i> Loading &amp; Unloading</a>
             <a href="<?= site_url('household-shifting') ?>"
-              class="<?= $segment1 === 'household-shifting' ? 'active' : '' ?>">Household Shifting</a>
+              class="<?= $segment1 === 'household-shifting' ? 'active' : '' ?>"><i class="bi bi-house-heart me-2"></i> Household Shifting</a>
             <a href="<?= site_url('bike-transportation') ?>"
-              class="<?= $segment1 === 'bike-transportation' ? 'active' : '' ?>">Bike Transportation</a>
+              class="<?= $segment1 === 'bike-transportation' ? 'active' : '' ?>"><i class="bi bi-bicycle me-2"></i> Bike Transportation</a>
             <a href="<?= site_url('car-transportation') ?>"
-              class="<?= $segment1 === 'car-transportation' ? 'active' : '' ?>">Car Transportation</a>
+              class="<?= $segment1 === 'car-transportation' ? 'active' : '' ?>"><i class="bi bi-car-front me-2"></i> Car Transportation</a>
             <a href="<?= site_url('warehouse-storage') ?>"
-              class="<?= $segment1 === 'warehouse-storage' ? 'active' : '' ?>">Warehouse Storage</a>
+              class="<?= $segment1 === 'warehouse-storage' ? 'active' : '' ?>"><i class="bi bi-building-down me-2"></i> Warehouse Storage</a>
             <a href="<?= site_url('door-to-door-shifting') ?>"
-              class="<?= $segment1 === 'door-to-door-shifting' ? 'active' : '' ?>">Door-to-Door Shifting</a>
+              class="<?= $segment1 === 'door-to-door-shifting' ? 'active' : '' ?>"><i class="bi bi-door-open me-2"></i> Door-to-Door Shifting</a>
             <a href="<?= site_url('cargo-services') ?>"
-              class="<?= $segment1 === 'cargo-services' ? 'active' : '' ?>">Cargo Services</a>
+              class="<?= $segment1 === 'cargo-services' ? 'active' : '' ?>"><i class="bi bi-globe-americas me-2"></i> Cargo Services</a>
           </div>
         </div>
 
         <div class="mobile-nav-item<?= $active_tab === 'locations' ? ' active' : '' ?>">
-          <a href="<?= site_url('our-branches') ?>" class="mobile-nav-link">Locations</a>
+          <a href="<?= site_url('our-branches') ?>" class="mobile-nav-link"><i class="bi bi-geo-alt me-2"></i> Locations</a>
         </div>
         <div class="mobile-nav-item<?= $active_tab === 'blog' ? ' active' : '' ?>">
-          <a href="<?= site_url('blog') ?>" class="mobile-nav-link">Blog</a>
+          <a href="<?= site_url('blog') ?>" class="mobile-nav-link"><i class="bi bi-journal-text me-2"></i> Blog</a>
         </div>
 
         <div class="mobile-nav-item<?= $active_tab === 'contact' ? ' active' : '' ?>">
-          <a href="<?= site_url('contact-us') ?>" class="mobile-nav-link">Contact Us</a>
+          <a href="<?= site_url('contact-us') ?>" class="mobile-nav-link"><i class="bi bi-telephone me-2"></i> Contact Us</a>
         </div>
 
         <div class="mobile-nav-item<?= $active_tab === 'tracking' ? ' active' : '' ?>">
-          <a href="<?= site_url('tracking') ?>" class="mobile-nav-link">Track</a>
+          <a href="<?= site_url('tracking') ?>" class="mobile-nav-link"><i class="bi bi-truck me-2"></i> Track</a>
         </div>
       </div>
 
       <!-- Secondary Links -->
       <div class="mobile-sec-links">
-        <a href="<?= site_url('photo-gallery') ?>">Gallery</a>
-        <a href="<?= site_url('reviews') ?>">Reviews</a>
-        <a href="<?= site_url('privacy-policy') ?>">Privacy Policy</a>
-        <a href="<?= site_url('terms-and-conditions') ?>">Terms &amp; Conditions</a>
-        <a href="<?= $megaWhatsappLink ?>" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="<?= site_url('photo-gallery') ?>"><i class="bi bi-images"></i> Gallery</a>
+        <a href="<?= site_url('reviews') ?>"><i class="bi bi-star"></i> Reviews</a>
+        <a href="<?= site_url('privacy-policy') ?>"><i class="bi bi-shield-lock"></i> Privacy Policy</a>
+        <a href="<?= site_url('terms-and-conditions') ?>"><i class="bi bi-file-earmark-text"></i> Terms &amp; Conditions</a>
       </div>
     </div>
   </nav>
 
   <script>
-    const openMenu = document.getElementById('openMenu');
-    const closeMenu = document.getElementById('closeMenu');
-    const megaMenu = document.getElementById('megaMenu');
-    const body = document.body;
-    const mainHeader = document.getElementById('mainHeader');
+    const openMenu = document.getElementById('openMenu'),
+          closeMenu = document.getElementById('closeMenu'),
+          megaMenu = document.getElementById('megaMenu'),
+          body = document.body,
+          mainHeader = document.getElementById('mainHeader');
 
-    openMenu.addEventListener('click', () => {
-      megaMenu.classList.add('active');
-      body.classList.add('menu-open');
-    });
+    const toggleMenu = (isOpen) => {
+      megaMenu.classList.toggle('active', isOpen);
+      openMenu.classList.toggle('active', isOpen);
+      body.classList.toggle('menu-open', isOpen);
+    };
 
-    closeMenu.addEventListener('click', () => {
-      megaMenu.classList.remove('active');
-      body.classList.remove('menu-open');
-    });
+    openMenu.onclick = () => toggleMenu(true);
+    closeMenu.onclick = () => toggleMenu(false);
+    megaMenu.onclick = (e) => e.target === megaMenu && toggleMenu(false);
+    document.onkeydown = (e) => e.key === 'Escape' && toggleMenu(false);
+    window.onscroll = () => mainHeader.classList.toggle('scrolled', window.scrollY > 20);
 
-    // Toggle mobile dropdown accordions
-    document.querySelectorAll('.mobile-dropdown-toggle').forEach(button => {
-      button.addEventListener('click', (e) => {
+    document.querySelectorAll('.mobile-dropdown-toggle').forEach(btn => {
+      btn.onclick = (e) => {
         e.preventDefault();
-        const parent = button.closest('.mobile-nav-item');
-
-        // Close other open dropdowns (accordion style)
+        const parent = btn.closest('.mobile-nav-item');
         document.querySelectorAll('.mobile-nav-item.mobile-dropdown').forEach(item => {
-          if (item !== parent) {
-            item.classList.remove('active');
-          }
+          if (item !== parent) item.classList.remove('active');
         });
-
         parent.classList.toggle('active');
-      });
-    });
-
-    // Close menu when clicking on backdrop overlay
-    megaMenu.addEventListener('click', (e) => {
-      if (e.target === megaMenu) {
-        megaMenu.classList.remove('active');
-        body.classList.remove('menu-open');
-      }
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        megaMenu.classList.remove('active');
-        body.classList.remove('menu-open');
-      }
-    });
-
-    window.addEventListener('scroll', () => {
-      mainHeader.classList.toggle('scrolled', window.scrollY > 20);
+      };
     });
   </script>
