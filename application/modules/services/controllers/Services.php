@@ -7,57 +7,93 @@ class Services extends MX_Controller
         redirect('', 'location', 301);
     }
 
-    function homeShifting()
+    function homeRelocation()
     {
-        $data['title'] = "Best Home Shifting Services | " . $this->comp['company3'];
-        $data['description'] = "Get reliable, safe, and professional home shifting services from " . $this->comp['company3'] . ".";
+        $data['title'] = "Best Home Relocation Services | " . $this->comp['company3'];
+        $data['description'] = "Get reliable, safe, and professional home shifting and household relocation services from " . $this->comp['company3'] . " in " . $city . ".";
         $data['module'] = "services";
-        $data['view_file'] = "home_shifting";
+        $data['view_file'] = "home_relocation";
         echo Modules::run('template/layout2', $data);
     }
 
-    function office()
+    function officeRelocation()
     {
         $data['title'] = "Professional Office Relocation Services | " . $this->comp['company3'];
-        $data['description'] = "Smooth and secure office shifting services by " . $this->comp['company3'] . ".";
+        $data['description'] = "Smooth and secure commercial and office shifting services in " . $city . " by " . $this->comp['company3'] . ".";
         $data['module'] = "services";
-        $data['view_file'] = "office";
+        $data['view_file'] = "office_relocation";
         echo Modules::run('template/layout2', $data);
     }
 
-    function bike()
+    function packingUnpacking()
     {
-        $data['title'] = "Reliable Bike Transportation Services | " . $this->comp['company3'];
-        $data['description'] = "Hire trusted two-wheeler and bike shifting services from " . $this->comp['company3'] . ".";
+        $data['title'] = "Packing and Unpacking Services | " . $this->comp['company3'];
+        $data['description'] = "Secure packing and unpacking services by " . $this->comp['company3'] . " using high quality packaging materials.";
         $data['module'] = "services";
-        $data['view_file'] = "bike";
-        echo Modules::run('template/layout2', $data);
-    }
-
-    function car()
-    {
-        $data['title'] = "Safe Car Transportation Services | " . $this->comp['company3'];
-        $data['description'] = "Secure car carrier and transportation services by " . $this->comp['company3'] . ".";
-        $data['module'] = "services";
-        $data['view_file'] = "car";
-        echo Modules::run('template/layout2', $data);
-    }
-
-    function packingMoving()
-    {
-        $data['title'] = "Packing and Moving Services | " . $this->comp['company3'];
-        $data['description'] = "Secure packing and moving services by " . $this->comp['company3'] . ".";
-        $data['module'] = "services";
-        $data['view_file'] = "packing_moving";
+        $data['view_file'] = "packing_unpacking";
         echo Modules::run('template/layout2', $data);
     }
 
     function loadingUnloading()
     {
-        $data['title'] = "Loading Unloading Services | " . $this->comp['company3'];
-        $data['description'] = "Safe and professional loading and unloading services by " . $this->comp['company3'] . ".";
+        $data['title'] = "Safe Loading and Unloading Services | " . $this->comp['company3'];
+        $data['description'] = "Safe and professional loading and unloading services in " . $city . " by " . $this->comp['company3'] . ".";
         $data['module'] = "services";
         $data['view_file'] = "loading_unloading";
+        echo Modules::run('template/layout2', $data);
+    }
+
+    function householdShifting()
+    {
+        $data['title'] = "Best Household Shifting Services | " . $this->comp['company3'];
+        $data['description'] = "Get reliable, safe, and professional household shifting and home relocation services from " . $this->comp['company3'] . " in " . $city . ".";
+        $data['module'] = "services";
+        $data['view_file'] = "household_shifting";
+        echo Modules::run('template/layout2', $data);
+    }
+
+    function bikeTransportation()
+    {
+        $data['title'] = "Reliable Bike Transportation Services | " . $this->comp['company3'];
+        $data['description'] = "Hire trusted two-wheeler and bike shifting carrier services from " . $this->comp['company3'] . " in " . $city . ".";
+        $data['module'] = "services";
+        $data['view_file'] = "bike_transportation";
+        echo Modules::run('template/layout2', $data);
+    }
+
+    function carTransportation()
+    {
+        $data['title'] = "Safe Car Transportation Services | " . $this->comp['company3'];
+        $data['description'] = "Secure car carrier and transportation services in " . $city . " by " . $this->comp['company3'] . ".";
+        $data['module'] = "services";
+        $data['view_file'] = "car_transportation";
+        echo Modules::run('template/layout2', $data);
+    }
+
+    function warehouseStorage()
+    {
+        $data['title'] = "Secure Warehouse and Storage Services | " . $this->comp['company3'];
+        $data['description'] = "Safe, temperature-controlled, and secure warehouse storage facilities by " . $this->comp['company3'] . " in " . $city . ".";
+        $data['module'] = "services";
+        $data['view_file'] = "warehouse_storage";
+        echo Modules::run('template/layout2', $data);
+    }
+
+    function doorToDoorShifting()
+    {
+        $data['title'] = "Door-to-Door Shifting Services | " . $this->comp['company3'];
+        $data['description'] = "Convenient door-to-door relocation and household shifting services by " . $this->comp['company3'] . " in " . $city . ".";
+        $data['module'] = "services";
+        $data['view_file'] = "door_to_door_shifting";
+        echo Modules::run('template/layout2', $data);
+    }
+
+    function cargoServices()
+    {
+        $data['title'] = "Domestic Cargo & Logistics Services | " . $this->comp['company3'];
+        $data['description'] = "Reliable domestic cargo shipping, freight forwarding, and logistic solutions by " . $this->comp['company3'] . " in " . $city . ".";
+        $data['module'] = "services";
+        $data['view_file'] = "cargo_services";
         echo Modules::run('template/layout2', $data);
     }
 }

@@ -8,8 +8,8 @@ class Gallery extends MX_Controller {
 
     function photo_gallery()
     {
-        $data['title'] = "Photo Gallery | " . $this->comp['company3'];
-        $data['description'] = "Explore visual highlights of our cargo handling, warehouse storage, specialized container fleets, and global logistics operations at " . $this->comp['company3'] . ".";
+        $data['title'] = "Shifting Photo Gallery | " . $this->comp['company3'];
+        $data['description'] = "Explore photos of household shifting, office relocation, vehicle loading, and packing quality standard operations at " . $this->comp['company3'] . " in " . $city . ".";
         
         $this->db->where('status', 1);
         $this->db->order_by('auto_id', 'DESC');
@@ -22,8 +22,8 @@ class Gallery extends MX_Controller {
 
     function video_gallery()
     {
-        $data['title'] = "Video Gallery | " . $this->comp['company3'];
-        $data['description'] = "Watch our step-by-step cargo handling processes, transport safety standards, and global freight forwarding operations in action at " . $this->comp['company3'] . ".";
+        $data['title'] = "Relocation Videos & Work Demos | " . $this->comp['company3'];
+        $data['description'] = "Watch live videos of our packing process, loading-unloading techniques, and customer feedbacks at " . $this->comp['company3'] . " in " . $city . ".";
         
         $this->db->where('status', 1);
         $this->db->order_by('auto_id', 'DESC');

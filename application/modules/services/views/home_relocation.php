@@ -2,10 +2,10 @@
 
 <!-- Breadcrumbs Section -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
-    'bc_h1' => 'Loading & Unloading',
-    'bc_desc' => "Loading & Unloading Services",
+    'bc_h1' => 'Home Relocation',
+    'bc_desc' => "Home Relocation Services",
     'breadcrumbs' => [
-        ['name' => 'Loading & Unloading']
+        ['name' => 'Home Relocation']
     ]
 ]);
 ?>

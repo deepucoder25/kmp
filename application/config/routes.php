@@ -29,16 +29,19 @@ $route["bike-transport-in-(:any)"] = "city_services/bike_transport/$1";
 
 // Services Routes
 $route["our-services"] = "services/index";
-$route["home-relocation"] = "services/homeShifting";
-$route["office-relocation"] = "services/office";
-$route["bike-transportation"] = "services/bike";
-$route["car-transportation"] = "services/car";
-$route["packing-and-moving"] = "services/packingMoving";
-$route["loading-unloading"] = "services/loadingUnloading";
+$route["home-relocation"] = "services/homeRelocation";
+$route["office-relocation"] = "services/officeRelocation";
+$route["packing-and-unpacking"] = "services/packingUnpacking";
+$route["loading-and-unloading"] = "services/loadingUnloading";
+$route["household-shifting"] = "services/householdShifting";
+$route["bike-transportation"] = "services/bikeTransportation";
+$route["car-transportation"] = "services/carTransportation";
+$route["warehouse-storage"] = "services/warehouseStorage";
+$route["door-to-door-shifting"] = "services/doorToDoorShifting";
+$route["cargo-services"] = "services/cargoServices";
 
 // Legacy/Compatibility Routes
-$route["storage-services"] = "services/storage";
-$route["car-transportation-service"] = "services/car";
+$route["car-transportation-service"] = "services/carTransportation";
 $route["infrastructure"] = "about/infrastructure";
 $route["why-choose-us"] = "about/choose";
 

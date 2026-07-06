@@ -73,10 +73,14 @@ $floatingWhatsappLink = !empty($whatsapphtml)
             <ul>
               <li><a href="<?= site_url('home-relocation') ?>">Home Relocation</a></li>
               <li><a href="<?= site_url('office-relocation') ?>">Office Relocation</a></li>
-              <li><a href="<?= site_url('car-transportation') ?>">Car Transportation</a></li>
+              <li><a href="<?= site_url('packing-and-unpacking') ?>">Packing &amp; Unpacking</a></li>
+              <li><a href="<?= site_url('loading-and-unloading') ?>">Loading &amp; Unloading</a></li>
+              <li><a href="<?= site_url('household-shifting') ?>">Household Shifting</a></li>
               <li><a href="<?= site_url('bike-transportation') ?>">Bike Transportation</a></li>
-              <li><a href="<?= site_url('packing-and-moving') ?>">Packing &amp; Moving Service</a></li>
-              <li><a href="<?= site_url('loading-unloading') ?>">Loading Unloading Service</a></li>
+              <li><a href="<?= site_url('car-transportation') ?>">Car Transportation</a></li>
+              <li><a href="<?= site_url('warehouse-storage') ?>">Warehouse Storage</a></li>
+              <li><a href="<?= site_url('door-to-door-shifting') ?>">Door-to-Door Shifting</a></li>
+              <li><a href="<?= site_url('cargo-services') ?>">Cargo Services</a></li>
             </ul>
           </div>
         </div>
