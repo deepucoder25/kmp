@@ -5,10 +5,9 @@ html, body {
 }
 
 :root {
-    --dark-navy: #030f26;
-    --primary-blue: #0a4ebd;
-    --accent-gold: #ffb300;
-    --text-dark: #20344d;
+    --primary-color: #199416;
+    --secondary-color: #FF800D;
+    --text-dark: #000000;
     --white: #ffffff;
 }
 

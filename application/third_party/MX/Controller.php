@@ -51,15 +51,15 @@ class MX_Controller
         $this->load = clone load_class('Loader');
         $this->load->initialize($this);
 
-        $this->comp['phone'] = '+91 0000000000';
-        $this->comp['phonehtml'] = 'tel:+910000000000';
-        $this->comp['phone1'] = '+91 0000000000';
-        $this->comp['phonehtml1'] = 'tel:+910000000000';
+        $this->comp['phone'] = '+91 9266778299';
+        $this->comp['phonehtml'] = 'tel:+919266778299';
+        $this->comp['phone1'] = '+91 8130423853';
+        $this->comp['phonehtml1'] = 'tel:+918130423853';
         $this->comp['supportmail'] = 'support@mycompany.com';
         $this->comp['replyToMail'] = 'support@mycompany.com';
-        $this->comp['mail'] = 'support@mycompany.com';    
-        $this->comp['mailhtml'] = "mailto:support@mycompany.com";
-        $this->comp['company3'] = 'MyCompany';
+        $this->comp['mail'] = 'kiranpackersm@gmail.com';    
+        $this->comp['mailhtml'] = "mailto:kiranpackersm@gmail.com";
+        $this->comp['company3'] = 'Kiran Packers Movers';
         $this->comp['companydomain'] = 'mycompany.com';
 
         $this->comp['facebookhtml'] = "";
@@ -67,21 +67,22 @@ class MX_Controller
         $this->comp['instagramhtml'] = "";
         $this->comp['twitterhtml'] = "";
         $this->comp['linkedinhtml'] = "";
-        $this->comp['whatsapphtml'] = "https://wa.me/910000000000";
+        $this->comp['whatsapphtml'] = "https://wa.me/919266778299";
 
-        $this->comp['address'] = "Shop No.17, Building No.2, Deeplaxmi Rajaram Residency, Kalher, Bhiwandi, Mumbai, Pin Code- 421302";
-        $this->comp['address1'] = "Shop No.17, Building No.2, Deeplaxmi Rajaram Residency";
-        $this->comp['address2'] = "Kalher, Bhiwandi, Mumbai, Pin Code- 421302";
-        $this->comp['addressRegion'] = "Mumbai";
-        $this->comp['postalCode'] = "421302";
-        $this->comp['companystate'] = "Maharashtra";
+        $this->comp['address'] = "Nistauli, Teela Mod, Ghaziabad, Uttar Pradesh - 201102";
+        $this->comp['address1'] = "Nistauli, Teela Mod, Ghaziabad";
+        $this->comp['address2'] = "Ghaziabad, Uttar Pradesh - 201102";
+        $this->comp['addressRegion'] = "Ghaziabad";
+        $this->comp['postalCode'] = "201102";
+        $this->comp['companystate'] = "Uttar Pradesh";
         $this->comp['themeColor'] = "#0a4ebd";
 
-        $this->comp['experience'] = "40+";
-        $this->comp['startYear'] = "1986";
+        $this->comp['experience'] = "6+";
+        $this->comp['startYear'] = "2018";
 
-        $this->comp['happyClients'] = "39,850+";
-        $this->comp['yearsExperience'] = "40+";
+        $this->comp['happyClients'] = "1500+";
+        $this->comp['successfullMoves'] = "1435+";
+        $this->comp['yearsExperience'] = "6+";
         $this->comp['secureShifting'] = "100%";
         $this->comp['statesCovered'] = "20+";
 
@@ -89,7 +90,7 @@ class MX_Controller
         $this->comp['mpn'] = "SPM28957";
         // Review
         $this->comp['ratingValue'] = "4.9";
-        $this->comp['ratingCount'] = "39850";
+        $this->comp['ratingCount'] = "1500+";
         $this->comp['datePublished'] = "15 May, 2026";
         $this->comp['reviewBody'] = "Best Packing And Moving Company in India.";
         $this->comp['reviewperson'] = "Arshad Ali";
