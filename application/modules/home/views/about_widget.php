@@ -1,126 +1,190 @@
-<?php if (!defined('BASEPATH')) exit('No direct script access allowed'); 
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
-// Fetch site-wide dynamic company settings (loaded from MX_Controller or system context)
-$companyName = isset($company3) ? $company3 : 'MyCompany';
-$companyPhone = isset($phone) ? $phone : '+91 ';
-$companyPhoneHtml = isset($phonehtml) ? $phonehtml : 'tel:+';
-$companyEmail = isset($mail) ? $mail : '';
-$companyEmailHtml = isset($mailhtml) ? $mailhtml : '';
-$companyExperience = isset($experience) ? $experience : '';
-$companyLocation = isset($addressRegion) ? $addressRegion : '';
-$companyState = isset($companystate) ? $companystate : '';
-?>
-
-<section class="about-section py-5">
-    <!-- Background Decor Grid Patterns -->
-    <div class="about-decor decor-top-right"></div>
-    <div class="about-decor decor-bottom-left"></div>
-
-    <div class="container position-relative about-z2">
-        <div class="row align-items-center g-4 g-lg-5">
+<section class="about-section-new py-5">
+    <!-- Decorative Circle Backdrop -->
+    <div class="about-circle-decor d-none d-lg-block"></div>
+    
+    <div class="container">
+        <div class="row align-items-center">
             
-            <!-- Left Side: Image Showcase -->
             <div class="col-lg-6 col-12">
-                <div class="about-image-wrap position-relative">
-                    <div class="about-img-bg-shape"></div>
-                    <img src="<?= base_url('assets/images/about/about-showcase.webp') ?>" 
-                         alt="Reliable Packers and Movers Service - <?= htmlspecialchars($companyName) ?>" 
-                         class="about-img img-fluid rounded-4 shadow-lg position-relative about-z2" 
-                         loading="lazy">
-                    
-                    <!-- Floating Experience Badge -->
-                    <div class="about-experience-badge d-flex align-items-center shadow-lg">
-                        <div class="exp-number"><?= htmlspecialchars($companyExperience) ?></div>
-                        <div class="exp-text">
-                            <span class="d-block text-uppercase font-weight-bold">Years of</span>
-                            <span class="d-block text-uppercase">Trusted service</span>
+                <div class="services-header-new text-left mb-4">
+                    <div class="services-eyebrow-new text-left justify-content-start">
+                        <h3 class="eyebrow-text">ABOUT US</h3>
+                        <div class="eyebrow-line-dots">
+                            <span class="eyebrow-line"></span>
+                            <span class="eyebrow-dot"></span>
+                            <span class="eyebrow-line-short"></span>
+                            <span class="eyebrow-dot"></span>
+                            <span class="eyebrow-line-short"></span>
+                            <span class="eyebrow-dot"></span>
+                            <span class="eyebrow-line"></span>
                         </div>
+                    </div>
+                    <h2 class="services-main-title-new mt-3">
+                        MOVING LIVES, <span class="highlight-green">DELIVERING TRUST.</span>
+                    </h2>
+                </div>
+
+                <div class="about-heading-divider mb-4">
+                    <span class="divider-line-long"></span>
+                    <span class="divider-dot"></span>
+                    <span class="divider-dot"></span>
+                </div>
+
+                <div class="about-body-text">
+                    <p class="mb-3">
+                        Kiran Packers Movers is a trusted name in the moving industry, providing reliable, affordable and hassle-free relocation services across India. With years of experience and a team of trained professionals, we have successfully helped thousands of families and businesses move to their new destinations with complete peace of mind.
+                    </p>
+                    <p class="mb-4">
+                        From careful packing to safe delivery, we handle every step with professionalism, transparency and care. Our mission is simple - to deliver a moving experience that is smooth, secure and satisfying.
+                    </p>
+                </div>
+
+                <div class="about-metrics-bar mb-4">
+                    <div class="row g-0 align-items-center">
+                        
+                        <div class="col-3 text-center metric-item">
+                            <div class="metric-icon green-icon">
+                                <i class="bi bi-people-fill"></i>
+                            </div>
+                            <h4 class="metric-number green-text"><?= $happyClients ?></h4>
+                            <p class="metric-label">Happy Customers</p>
+                        </div>
+                        
+                        <div class="col-3 text-center metric-item">
+                            <div class="metric-icon orange-icon">
+                                <i class="bi bi-box-seam"></i>
+                            </div>
+                            <h4 class="metric-number orange-text"><?= $successfullMoves ?></h4>
+                            <p class="metric-label">Successful Moves</p>
+                        </div>
+                        
+                        <div class="col-3 text-center metric-item">
+                            <div class="metric-icon green-icon">
+                                <i class="bi bi-geo-alt-fill"></i>
+                            </div>
+                            <h4 class="metric-number green-text"><?= $statesCovered ?></h4>
+                            <p class="metric-label">States Served</p>
+                        </div>
+                        
+                        <div class="col-3 text-center metric-item">
+                            <div class="metric-icon orange-icon">
+                                <i class="bi bi-shield-check"></i>
+                            </div>
+                            <h4 class="metric-number orange-text"><?= $secureShifting ?></h4>
+                            <p class="metric-label">Safe & Secure</p>
+                        </div>
+
                     </div>
                 </div>
             </div>
 
-            <!-- Right Side: Content Details -->
-            <div class="col-lg-6 col-12">
-                <div class="about-content">
+            <!-- Right Column: Flipped Image with decor & overlays -->
+            <div class="col-lg-6 col-12 position-relative">
+                <div class="about-dots-decor d-none d-lg-block"></div>
+                <div class="about-image-wrapper">
+                    <img src="<?= base_url('assets/images/home_modules/about-showcase.jpg') ?>" alt="Kiran Packers Movers loading delivery truck" class="about-showcase-img img-fluid">
                     
-                    <!-- Subheading Badge -->
-                    <div class="about-badge-wrap d-flex align-items-center mb-3">
-                        <span class="about-badge-line"></span>
-                        <span class="about-pill-badge text-uppercase">Who We Are</span>
-                    </div>
-
-                    <!-- SEO-Friendly Heading -->
-                    <h2 class="about-title mb-3">
-                        Reliable Shifting &amp; Relocation Services by <span class="text-primary-blue"><?= htmlspecialchars($companyName) ?></span>
-                    </h2>
-
-                    <!-- Descriptive Paragraphs -->
-                    <p class="about-desc-lead mb-3">
-                        Moving to a new home, office, or transporting vehicles can feel overwhelming. At <strong><?= htmlspecialchars($companyName) ?></strong>, we are committed to making your relocation journey smooth, secure, and stress-free. Whether shifting locally within <?= htmlspecialchars($companyLocation) ?> or relocating across <?= htmlspecialchars($companyState) ?> and all over India, our team handles every aspect of your move with extreme care and precision.
-                    </p>
-                    
-                    <p class="about-desc mb-4">
-                        With over <strong><?= htmlspecialchars($companyExperience) ?> years</strong> of professional experience, we have established ourselves as one of India's most trusted packing and moving brands. We use industry-standard packaging materials, modern cargo carriers, and structured loading systems to ensure all your precious goods and vehicles reach their destination safely, on time, and damage-free.
-                    </p>
-
-                    <!-- Features List Grid -->
-                    <div class="row g-3 mb-4">
-                        <div class="col-md-6 col-12">
-                            <div class="about-feature-item d-flex align-items-center">
-                                <div class="feature-icon-circle mr-3">
-                                    <i class="bi bi-shield-check"></i>
-                                </div>
-                                <span class="feature-text">Fully Insured Shifting</span>
-                            </div>
+                    <div class="about-responsibility-badge">
+                        <div class="badge-icon-circle">
+                            <i class="bi bi-shield-fill-check"></i>
                         </div>
-                        <div class="col-md-6 col-12">
-                            <div class="about-feature-item d-flex align-items-center">
-                                <div class="feature-icon-circle mr-3">
-                                    <i class="bi bi-truck"></i>
-                                </div>
-                                <span class="feature-text">Modern GPS Fleet</span>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-12">
-                            <div class="about-feature-item d-flex align-items-center">
-                                <div class="feature-icon-circle mr-3">
-                                    <i class="bi bi-person-check"></i>
-                                </div>
-                                <span class="feature-text">Trained Packing Crew</span>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-12">
-                            <div class="about-feature-item d-flex align-items-center">
-                                <div class="feature-icon-circle mr-3">
-                                    <i class="bi bi-clock-history"></i>
-                                </div>
-                                <span class="feature-text">On-Time Safe Delivery</span>
-                            </div>
+                        <div class="badge-text">
+                            <p class="badge-subtitle">Your Belongings,</p>
+                            <h4 class="badge-title">Our Responsibility.</h4>
                         </div>
                     </div>
-
-                    <!-- Call To Actions -->
-                    <div class="d-flex flex-wrap align-items-center gap-3">
-                        <a href="<?= site_url('about-us') ?>" class="btn btn-primary-blue shadow-sm d-flex align-items-center">
-                            Read More About Us
-                            <i class="bi bi-arrow-right-short ml-2 font-weight-bold about-cta-icon"></i>
-                        </a>
-                        <div class="about-contact-wrap d-flex align-items-center ml-md-4 mt-2 mt-md-0">
-                            <div class="about-contact-icon d-flex align-items-center justify-content-center">
-                                <i class="bi bi-telephone-fill"></i>
-                            </div>
-                            <div class="about-contact-details ml-2">
-                                <span class="d-block contact-label text-muted">Talk to an Expert</span>
-                                <a href="<?= htmlspecialchars($companyPhoneHtml) ?>" class="contact-number font-weight-bold text-decoration-none">
-                                    <?= htmlspecialchars($companyPhone) ?>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
 
         </div>
     </div>
 </section>
+
+<section class="why-choose-us-new py-5">
+    <div class="container">
+        <div class="services-header-new text-center mb-5">
+            <div class="services-eyebrow-new text-center justify-content-center">
+                <h3 class="eyebrow-text">WHY CHOOSE US</h3>
+                <div class="eyebrow-line-dots">
+                    <span class="eyebrow-line"></span>
+                    <span class="eyebrow-dot"></span>
+                    <span class="eyebrow-line-short"></span>
+                    <span class="eyebrow-dot"></span>
+                    <span class="eyebrow-line-short"></span>
+                    <span class="eyebrow-dot"></span>
+                    <span class="eyebrow-line"></span>
+                </div>
+            </div>
+            <p class="services-subtitle-new text-muted mt-3 max-width-700 mx-auto">
+                We go the extra mile to make your move smooth and worry-free. Our focus is always on quality service, complete transparency and customer satisfaction.
+            </p>
+        </div>
+
+        <div class="wcu-grid">
+            
+            <div class="wcu-item">
+                <div class="wcu-icon-circle wcu-circle-green">
+                    <i class="bi bi-person-fill-check"></i>
+                </div>
+                <div class="wcu-text-wrap">
+                    <h4 class="wcu-title text-wcu-green">EXPERIENCED PROFESSIONALS</h4>
+                    <p class="wcu-desc">Our skilled and trained team handles your belongings with care and ensures a smooth moving experience.</p>
+                </div>
+            </div>
+
+            <div class="wcu-item">
+                <div class="wcu-icon-circle wcu-circle-orange">
+                    <i class="bi bi-box-seam-fill"></i>
+                </div>
+                <div class="wcu-text-wrap">
+                    <h4 class="wcu-title text-wcu-orange">QUALITY PACKING MATERIALS</h4>
+                    <p class="wcu-desc">We use high-quality packing materials to protect your items from damage during transit.</p>
+                </div>
+            </div>
+
+            <div class="wcu-item">
+                <div class="wcu-icon-circle wcu-circle-green">
+                    <i class="bi bi-truck"></i>
+                </div>
+                <div class="wcu-text-wrap">
+                    <h4 class="wcu-title text-wcu-green">ON-TIME DELIVERY</h4>
+                    <p class="wcu-desc">We value your time and ensure timely pickup and delivery as per the committed schedule.</p>
+                </div>
+            </div>
+
+            <div class="wcu-item">
+                <div class="wcu-icon-circle wcu-circle-orange">
+                    <i class="bi bi-shield-fill-check"></i>
+                </div>
+                <div class="wcu-text-wrap">
+                    <h4 class="wcu-title text-wcu-orange">SAFE & SECURE HANDLING</h4>
+                    <p class="wcu-desc">Your safety is our priority. We follow best practices to ensure secure loading, transportation and unloading.</p>
+                </div>
+            </div>
+
+            <div class="wcu-item">
+                <div class="wcu-icon-circle wcu-circle-green">
+                    <i class="bi bi-coin"></i>
+                </div>
+                <div class="wcu-text-wrap">
+                    <h4 class="wcu-title text-wcu-green">AFFORDABLE PRICING</h4>
+                    <p class="wcu-desc">Get the best moving services at competitive prices with no hidden charges.</p>
+                </div>
+            </div>
+
+            <div class="wcu-item">
+                <div class="wcu-icon-circle wcu-circle-orange">
+                    <i class="bi bi-headphones"></i>
+                </div>
+                <div class="wcu-text-wrap">
+                    <h4 class="wcu-title text-wcu-orange">24/7 CUSTOMER SUPPORT</h4>
+                    <p class="wcu-desc">Our support team is available 24/7 to assist you at every step of your move.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
