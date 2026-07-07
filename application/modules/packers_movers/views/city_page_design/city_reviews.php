@@ -5,18 +5,18 @@
     <h3 class="city-section-title-sm m-0">
       <i class="bi bi-chat-left-quote me-2"></i> What Our Customers Say
     </h3>
-    <div class="rev-arrows-top d-flex gap-2">
-      <button class="rev-arrow-btn prev-btn" id="rev-prev-btn" aria-label="Previous review">
+    <div class="city-rev-arrows-top d-flex gap-2">
+      <button class="city-rev-arrow-btn prev-btn" id="city-rev-prev-btn" aria-label="Previous review">
         <i class="bi bi-chevron-left"></i>
       </button>
-      <button class="rev-arrow-btn next-btn" id="rev-next-btn" aria-label="Next review">
+      <button class="city-rev-arrow-btn next-btn" id="city-rev-next-btn" aria-label="Next review">
         <i class="bi bi-chevron-right"></i>
       </button>
     </div>
   </div>
 
-  <div class="review-carousel-wrapper">
-    <div class="rev-slider-track" id="rev-slider-track">
+  <div class="city-review-carousel-wrapper">
+    <div class="city-rev-slider-track" id="city-rev-slider-track">
       <?php
       $city_reviews = [
         [
@@ -46,9 +46,9 @@
       ];
       foreach ($city_reviews as $r):
       ?>
-      <div class="rev-card-col">
-        <div class="rev-testimonial-card w-100">
-          <div class="rev-stars mb-2">
+      <div class="city-rev-card-col">
+        <div class="city-rev-testimonial-card w-100">
+          <div class="city-rev-stars mb-2">
             <?php for ($s = 0; $s < 5; $s++): ?>
               <?php if ($s < $r['rating']): ?>
                 <i class="bi bi-star-fill text-warning"></i>
@@ -57,10 +57,10 @@
               <?php endif; ?>
             <?php endfor; ?>
           </div>
-          <p class="rev-card-text">"<?= htmlspecialchars($r['text']) ?>"</p>
-          <div class="rev-profile-container d-flex align-items-center">
-            <div class="rev-avatar"><?= $r['avatar'] ?></div>
-            <div class="rev-profile-details">
+          <p class="city-rev-card-text">"<?= htmlspecialchars($r['text']) ?>"</p>
+          <div class="city-rev-profile-container d-flex align-items-center">
+            <div class="city-rev-avatar"><?= $r['avatar'] ?></div>
+            <div class="city-rev-profile-details">
               <h5><?= htmlspecialchars($r['name']) ?></h5>
               <p><i class="bi bi-geo-alt-fill text-green"></i> <?= $city ?>, India</p>
             </div>
@@ -71,10 +71,10 @@
     </div>
   </div>
 
-  <div class="rev-slider-dots-container d-flex justify-content-center mt-3">
-    <div class="rev-slider-dots">
+  <div class="city-rev-slider-dots-container d-flex justify-content-center mt-3">
+    <div class="city-rev-slider-dots">
       <?php foreach ($city_reviews as $index => $r): ?>
-        <span class="review-dot-item <?= $index === 0 ? 'active' : '' ?>"></span>
+        <span class="city-review-dot-item <?= $index === 0 ? 'active' : '' ?>"></span>
       <?php endforeach; ?>
     </div>
   </div>

@@ -136,11 +136,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
     wireSlider('gallery-slider-track', 'gallery-prev-btn', 'gallery-next-btn', '.gallery-slide-item');
-    wireSlider('rev-slider-track', 'rev-prev-btn', 'rev-next-btn', '.rev-card-col');
+    wireSlider('city-rev-slider-track', 'city-rev-prev-btn', 'city-rev-next-btn', '.city-rev-card-col');
 
     // Simple dot indicator update for reviews
-    const revSlider = document.getElementById('rev-slider-track');
-    const revDots = document.querySelectorAll('.rev-slider-dots .review-dot-item');
+    const revSlider = document.getElementById('city-rev-slider-track');
+    const revDots = document.querySelectorAll('.city-rev-slider-dots .city-review-dot-item');
     if (revSlider && revDots.length) {
         revSlider.addEventListener('scroll', () => {
             const maxScroll = revSlider.scrollWidth - revSlider.clientWidth;
