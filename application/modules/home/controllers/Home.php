@@ -13,8 +13,8 @@ class Home extends MX_Controller
     }
     function index()
     {
-        $data['title'] = "Best Packers and Movers in $city & Nearby Regions | " . $this->comp['company3'];
-        $data['description'] = "Looking for reliable packers and movers in $city and surrounding areas? " . $this->comp['company3'] . " offers professional home shifting, office relocation, and vehicle transport at affordable rates. Call " . $this->comp['phone'] . ".";
+        $data['title'] = "Best Packers and Movers in India | " . $this->comp['company3'];
+        $data['description'] = "Looking for reliable packers and movers in India? " . $this->comp['company3'] . " offers professional home shifting, office relocation, and vehicle transport at affordable rates. Call " . $this->comp['phone'] . ".";
         $data['module'] = "home";
         $data['view_file'] = "home";
         echo Modules::run('template/layout1', $data);

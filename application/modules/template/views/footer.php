@@ -6,76 +6,46 @@ $floatingWhatsappLink = !empty($whatsapphtml)
   : (!empty($floatingPhoneNumber) ? 'https://wa.me/' . $floatingPhoneNumber : '#');
 ?>
 <footer class="footer-section">
-
   <div class="footer-main">
     <div class="container">
-      <div class="row g-4 g-xl-5">
-
-        <div class="col-lg-4">
+      <div class="row g-4">
+        
+        <!-- Column 1: Company Info -->
+        <div class="col-lg-3 col-md-6 col-12">
           <div class="footer-brand">
-            <a href="<?= site_url() ?>" class="footer-brand-logo">
-              <div class="h3 fw-bold text-white mb-2"><?= $company3 ?> </div>
-            </a>
-
+            <div class="footer-brand-title">
+              <span class="text-orange">Kiran</span> <span class="text-green">Packers Movers</span>
+            </div>
             <p class="footer-brand-copy">
-              Safe. Secure. Sincere. Your trusted moving partner for a hassle-free relocation experience.
+              We are a professional packing and moving company dedicated to providing safe, secure & reliable moving solutions for homes and businesses.
             </p>
-
-            <div class="footer-feature-strip">
-              <div class="footer-feature-item">
-                <i class="bi bi-shield-check"></i>
-                <span>Safe Handling</span>
+            
+            <div class="footer-trust-list">
+              <div class="trust-item">
+                <span class="trust-icon-circle bg-orange"><i class="bi bi-shield-check"></i></span>
+                <span class="trust-label">Safe & Secure Move</span>
               </div>
-
-              <div class="footer-feature-item">
-                <i class="bi bi-box-seam"></i>
-                <span>Secure Packing</span>
+              <div class="trust-item">
+                <span class="trust-icon-circle bg-green"><i class="bi bi-clock"></i></span>
+                <span class="trust-label">On-Time Delivery</span>
               </div>
-
-              <div class="footer-feature-item">
-                <i class="bi bi-people"></i>
-                <span>Experienced Team</span>
-              </div>
-
-              <div class="footer-feature-item">
-                <i class="bi bi-award"></i>
-                <span>On-Time Delivery</span>
+              <div class="trust-item">
+                <span class="trust-icon-circle bg-orange"><i class="bi bi-people"></i></span>
+                <span class="trust-label">Experienced Team</span>
               </div>
             </div>
-
-
           </div>
         </div>
 
-        <div class="col-lg-2 col-md-4 col-6">
-          <div class="footer-widget">
-            <div class="h5 fw-bold text-white mb-3">Quick Links</div>
-
+        <!-- Column 2: Our Services -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <div class="footer-widget widget-orange">
+            <h4>Our Services</h4>
             <ul>
-              <li><a href="<?= site_url() ?>">Home</a></li>
-              <li><a href="<?= site_url('tracking') ?>">Track Consignment</a></li>
-              <li><a href="<?= site_url('our-services') ?>">Our Services</a></li>
-              <li><a href="<?= site_url('about-us') ?>">About Us</a></li>
-              <li><a href="<?= site_url('why-choose-us') ?>">Why Choose Us</a></li>
-              <li><a href="<?= site_url('our-branches') ?>">Our Branches</a></li>
-              <li><a href="<?= site_url('testimonials') ?>">Testimonials</a></li>
-              <li><a href="<?= site_url('reviews') ?>">Reviews</a></li>
-              <li><a href="<?= site_url('photo-gallery') ?>">Gallery</a></li>
-              <li><a href="<?= site_url('contact-us') ?>">Contact Us</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4 col-6">
-          <div class="footer-widget">
-            <div class="h5 fw-bold text-white mb-3">Our Services</div>
-
-            <ul>
-              <li><a href="<?= site_url('home-relocation') ?>">Home Relocation</a></li>
+              <li><a href="<?= site_url('household-shifting') ?>">Household Shifting</a></li>
               <li><a href="<?= site_url('office-relocation') ?>">Office Relocation</a></li>
               <li><a href="<?= site_url('packing-and-unpacking') ?>">Packing &amp; Unpacking</a></li>
               <li><a href="<?= site_url('loading-and-unloading') ?>">Loading &amp; Unloading</a></li>
-              <li><a href="<?= site_url('household-shifting') ?>">Household Shifting</a></li>
               <li><a href="<?= site_url('bike-transportation') ?>">Bike Transportation</a></li>
               <li><a href="<?= site_url('car-transportation') ?>">Car Transportation</a></li>
               <li><a href="<?= site_url('warehouse-storage') ?>">Warehouse Storage</a></li>
@@ -85,30 +55,70 @@ $floatingWhatsappLink = !empty($whatsapphtml)
           </div>
         </div>
 
-        <div class="col-lg-3 col-md-4">
-          <div class="footer-widget footer-contact-widget">
-            <div class="h5 fw-bold text-white mb-3">Contact Us</div>
+        <!-- Column 3: Company -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <div class="footer-widget widget-green">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="<?= site_url('about-us') ?>">About Us</a></li>
+              <li><a href="<?= site_url('why-choose-us') ?>">Why Choose Us</a></li>
+              <li><a href="<?= site_url('our-branches') ?>">Our Branches</a></li>
+              <li><a href="<?= site_url('testimonials') ?>">Testimonial</a></li>
+              <li><a href="<?= site_url('faqs') ?>">FAQ</a></li>
+              <li><a href="<?= site_url('blog') ?>">Blog</a></li>
+              <li><a href="<?= site_url('contact-us') ?>">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
 
-            <div class="footer-contact-list">
-              <a href="<?= $phonehtml ?>" class="footer-contact-item">
-                <i class="bi bi-telephone-fill"></i>
-                <span><?= $phone ?></span>
+        <!-- Column 4: Useful Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <div class="footer-widget widget-orange">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="<?= site_url() ?>">Home</a></li>
+              <li><a href="<?= site_url('our-services') ?>">Services</a></li>
+              <li><a href="<?= site_url('about-us') ?>">About Us</a></li>
+              <li><a href="<?= site_url('contact-us') ?>">Contact Us</a></li>
+              <li><a href="<?= site_url('privacy-policy') ?>">Privacy Policy</a></li>
+              <li><a href="<?= site_url('terms-and-conditions') ?>">Terms &amp; Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Column 5: Contact Us -->
+        <div class="col-lg-3 col-md-6 col-12">
+          <div class="footer-widget widget-green footer-contact-widget">
+            <h4>Contact Us</h4>
+            <div class="footer-contact-list-new">
+              <div class="contact-item-new">
+                <i class="bi bi-telephone text-orange"></i>
+                <div class="contact-text-new">
+                  <a href="<?= $phonehtml ?>" class="contact-link-new"><?= $phone ?></a>
+                  <a href="<?= $phonehtml1 ?>" class="contact-link-new"><?= $phone1 ?></a>
+                </div>
+              </div>
+              <a href="<?= $mailhtml ?>" class="contact-item-new">
+                <i class="bi bi-envelope text-green"></i>
+                <div class="contact-text-new">
+                  <span><?= $mail ?></span>
+                </div>
               </a>
-
-              <a href="<?= $phonehtml1 ?>" class="footer-contact-item">
-                <i class="bi bi-telephone-fill"></i>
-                <span><?= $phone1 ?></span>
-              </a>
-
-              <a href="<?= $mailhtml ?>" class="footer-contact-item">
-                <i class="bi bi-envelope-fill"></i>
-                <span><?= $mail ?></span>
-              </a>
-
-
-              <div class="footer-contact-item footer-address-item">
-                <i class="bi bi-geo-alt-fill"></i>
-                <span><?= $address ?></span>
+              <div class="contact-item-new">
+                <i class="bi bi-geo-alt text-orange"></i>
+                <div class="contact-text-new">
+                  <span><?= $address ?></span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="footer-social-section mt-4">
+              <span class="social-title">Follow Us :</span>
+              <div class="social-icons-row">
+                <a href="<?= $facebookhtml ?>" class="social-icon fb" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="<?= $instagramhtml ?>" class="social-icon ig" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="<?= $whatsapphtml ?>" class="social-icon wa" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                <a href="<?= $youtubehtml ?>" class="social-icon yt" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
               </div>
             </div>
           </div>
@@ -116,63 +126,62 @@ $floatingWhatsappLink = !empty($whatsapphtml)
 
       </div>
 
-      <div class="footer-bottom">
-        <div class="footer-bottom-wrap">
-          <div class="footer-bottom-col footer-copy">
-            <p>
-              &copy; <?= date('Y') ?> <?= $company3 ?>.<br>
-              All Rights Reserved.
-            </p>
-          </div>
-
-          <div class="footer-bottom-col footer-bottom-badge">
-            <i class="bi bi-shield-check"></i>
-            <span>100% Secure Shifting</span>
-          </div>
-
-          <div class="footer-bottom-col footer-bottom-badge">
-            <i class="bi bi-people"></i>
-            <span>Reliable | Affordable | Professional</span>
-          </div>
-
-          <div class="footer-bottom-col footer-bottom-social">
-            <span class="footer-follow-text">Follow Us</span>
-
-            <div class="footer-social">
-              <a href="<?= $facebookhtml ?>" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-              <a href="<?= $instagramhtml ?>" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-              <a href="<?= $linkedinhtml ?>" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-              <a href="<?= $youtubehtml ?>" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="footer-policy-links">
-          <a href="<?= site_url('privacy-policy') ?>">Privacy Policy</a>
-          <a href="<?= site_url('terms-and-conditions') ?>">Terms &amp; Conditions</a>
+      <!-- Footer Bottom -->
+      <div class="footer-bottom-new mt-4 pt-3">
+        <div class="footer-bottom-content">
+          <span class="footer-copyright">
+            &copy; 2020 Kiran Packers Movers. We served all over India. All Rights Reserved.
+          </span>
         </div>
       </div>
     </div>
   </div>
-
 </footer>
 
-<div class="floating-actions">
-  <a href="<?= $phonehtml ?>" class="float-btn float-call" title="Call Now" aria-label="Call <?= $company3 ?> now">
-    <div class="icon-wrap"><i class="bi bi-telephone-fill"></i></div>
-    <span>Call Now</span>
+<div class="floating-actions-new">
+  <!-- Call Button Group -->
+  <div class="float-btn-group">
+    <button type="button" class="float-btn-circle float-call-btn" id="floatCallBtn" aria-expanded="false" title="Call Us">
+      <i class="bi bi-telephone-fill"></i>
+    </button>
+    <div class="float-call-menu" id="floatCallMenu">
+      <a href="<?= $phonehtml ?>" class="menu-item-call">
+        <i class="bi bi-telephone-fill"></i> <?= $phone ?>
+      </a>
+      <a href="<?= $phonehtml1 ?>" class="menu-item-call">
+        <i class="bi bi-telephone-fill"></i> <?= $phone1 ?>
+      </a>
+    </div>
+  </div>
+
+  <!-- WhatsApp Button -->
+  <a href="<?= $floatingWhatsappLink ?>" class="float-btn-circle float-whatsapp-btn" title="WhatsApp Us" target="_blank" rel="noopener">
+    <i class="bi bi-whatsapp"></i>
   </a>
-  <a href="<?= $floatingWhatsappLink ?>" class="float-btn float-whatsapp" title="WhatsApp Us" target="_blank"
-    rel="noopener" aria-label="Message <?= $company3 ?> on WhatsApp">
-    <div class="icon-wrap"><i class="bi bi-whatsapp"></i></div>
-    <span>WhatsApp Us</span>
-  </a>
-  <button type="button" class="float-btn float-callback" data-bs-toggle="modal" data-bs-target="#callMeBackModal"
-    title="Call Me Back" aria-label="Request a Call Back">
-    <div class="icon-wrap"><i class="bi bi-headset"></i></div>
-    <span>Call Me Back</span>
-  </button>
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const callBtn = document.getElementById("floatCallBtn");
+  const callMenu = document.getElementById("floatCallMenu");
+  
+  if (callBtn && callMenu) {
+    callBtn.addEventListener("click", function(e) {
+      e.stopPropagation();
+      const expanded = this.getAttribute("aria-expanded") === "true";
+      this.setAttribute("aria-expanded", !expanded);
+      callMenu.classList.toggle("show");
+    });
+    
+    document.addEventListener("click", function(e) {
+      if (!callMenu.contains(e.target) && e.target !== callBtn) {
+        callBtn.setAttribute("aria-expanded", "false");
+        callMenu.classList.remove("show");
+      }
+    });
+  }
+});
+</script>
 
 <?php $this->load->view('contacts/quotemodal'); ?>
 <?php $this->load->view('contacts/review_modal'); ?>
