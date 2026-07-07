@@ -191,7 +191,7 @@ $steps = [
 
         <div class="process-trust-bar-new mt-5">
             <div class="row align-items-center g-4 text-center text-lg-start">
-                <div class="col-lg-5 col-12">
+                <div class="col-lg-5 col-6">
                     <div class="trust-bar-item d-flex align-items-center justify-content-center justify-content-lg-start">
                         <div class="trust-bar-icon-shield mr-3">
                             <i class="bi bi-shield-check"></i>
@@ -202,7 +202,7 @@ $steps = [
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-12 trust-bar-separator">
+                <div class="col-lg-4 col-6 trust-bar-separator">
                     <div class="trust-bar-item d-flex align-items-center justify-content-center justify-content-lg-start">
                         <div class="trust-bar-icon-circle mr-3">
                             <i class="bi bi-telephone-fill"></i>

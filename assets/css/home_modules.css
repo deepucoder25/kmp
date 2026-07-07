@@ -480,10 +480,10 @@
     }
 
     .trust-bar-separator {
-        border-left: none;
-        padding-left: 0;
-        border-top: 1px solid rgba(0, 0, 0, 0.08);
-        padding-top: 20px;
+        border-left: 1px solid rgba(0, 0, 0, 0.08);
+        padding-left: 15px;
+        border-top: none;
+        padding-top: 0;
     }
 }
 
@@ -536,4 +536,622 @@
     .proc-card {
         height: auto;
     }
+}
+
+/* ==========================================================================
+   4. REVIEWS SECTION STYLING (NEW REDESIGN)
+   ========================================================================= */
+.reviews-section-new {
+    background-color: var(--white);
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.review-slider-viewport {
+    width: 100%;
+    overflow: hidden;
+}
+
+.review-cards-row {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 20px 5px;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Hide scrollbar for slider track */
+.review-cards-row::-webkit-scrollbar {
+    display: none;
+}
+.review-cards-row {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.rev-card-col {
+    flex: 0 0 calc(33.333% - 14px);
+    scroll-snap-align: start;
+    display: flex;
+}
+
+/* Intro Card (Green Card) */
+.rev-intro-card {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #116b0f 100%);
+    border-radius: 16px;
+    padding: 30px 22px 24px;
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+    box-shadow: 0 8px 30px rgba(17, 107, 15, 0.2);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.rev-intro-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(17, 107, 15, 0.35);
+}
+
+.rev-quote-icon-large {
+    font-size: 54px;
+    font-family: 'Outfit', sans-serif;
+    color: rgba(255, 255, 255, 0.15);
+    line-height: 1;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+
+.rev-intro-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--white);
+    margin-top: 15px;
+    margin-bottom: 0;
+    line-height: 1.35;
+}
+
+.rev-title-divider {
+    width: 50px;
+    height: 3.5px;
+    background-color: var(--secondary-color);
+    margin-top: 15px;
+    margin-bottom: 22px;
+    border-radius: 2px;
+}
+
+.rev-intro-desc {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 25px;
+}
+
+.rev-intro-svg-wrapper {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.rev-intro-svg {
+    width: 120px;
+    height: auto;
+    opacity: 0.95;
+}
+
+/* Testimonial Card */
+.rev-testimonial-card {
+    background: var(--white);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    padding: 42px 22px 24px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.015);
+    border-top: 3px solid var(--secondary-color);
+}
+
+.rev-testimonial-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+}
+
+.rev-card-badge {
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-family: 'Outfit', sans-serif;
+    line-height: 1;
+    z-index: 5;
+    box-shadow: 0 4px 10px rgba(25, 148, 22, 0.2);
+}
+
+.rev-stars {
+    display: flex;
+    gap: 4px;
+    color: var(--secondary-color);
+    font-size: 14px;
+}
+
+.rev-card-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.rev-profile-container {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding-top: 16px;
+    gap: 12px;
+}
+
+.rev-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1.5px solid rgba(25, 148, 22, 0.15);
+}
+
+.rev-avatar-icon-female ,.rev-avatar-icon-male {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #fee2e2;
+    color: #f87171;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+    border: 1.5px solid rgba(25, 148, 22, 0.15);
+}
+
+.rev-profile-details h5 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    color: #1a202c;
+    margin: 0 0 2px 0;
+}
+
+.rev-profile-details p {
+    font-family: 'Outfit', sans-serif;
+    font-size: 11.5px;
+    color: var(--text-muted);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.rev-profile-details p i {
+    color: var(--primary-color);
+}
+
+/* Pagination Dots & Navigation Arrows */
+.rev-controls-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.rev-arrow-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1.5px solid var(--primary-color);
+    background-color: var(--white);
+    color: var(--primary-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    outline: none;
+    padding: 0;
+}
+
+.rev-arrow-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    box-shadow: 0 4px 10px rgba(25, 148, 22, 0.15);
+}
+
+.rev-slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.rev-slider-dots .review-dot-item {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #e2e8f0;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.rev-slider-dots .review-dot-item.active {
+    background-color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+/* Bottom Stats Bar */
+.reviews-stats-bar-new {
+    background: #fcfdfb;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    padding: 24px 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.015);
+}
+
+.stats-icon-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background-color: rgba(25, 148, 22, 0.03);
+    margin-right: 16px;
+}
+
+.stats-icon-circle i {
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+.stats-text h4 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: #1a202c;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.stats-text .stats-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a202c;
+    margin: 1px 0;
+}
+
+.stats-text .stats-desc {
+    font-family: 'Outfit', sans-serif;
+    font-size: 11.5px;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.stats-separator {
+    position: relative;
+}
+
+@media (min-width: 992px) {
+    .stats-separator::before {
+        content: "";
+        position: absolute;
+        left: -15px;
+        top: 10%;
+        height: 80%;
+        width: 1px;
+        background-color: rgba(0, 0, 0, 0.08);
+    }
+}
+
+/* Tablet & Mobile responsive overrides */
+@media (max-width: 1199px) {
+    .rev-card-col {
+        flex: 0 0 calc(50% - 10px);
+    }
+}
+
+@media (max-width: 991px) {
+    .rev-card-col {
+        flex: 0 0 calc(50% - 10px);
+    }
+    .stats-separator::before {
+        display: none;
+    }
+    .stats-col {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        padding-bottom: 15px;
+    }
+    .stats-col:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 575px) {
+    .rev-card-col {
+        flex: 0 0 85%;
+    }
+    .stats-text h4 {
+        font-size: 18px;
+    }
+}
+
+/* ==========================================================================
+   5. FAQ SECTION STYLING (RESTORED FROM BACKUP)
+   ========================================================================== */
+.faq-section {
+    background-color: #fbfcfe;
+    padding: 40px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Decor Elements */
+.faq-section .faq-decor {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.faq-section .decor-top-left {
+    top: 5%;
+    left: 2%;
+    width: 120px;
+    height: 120px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='none'><pattern id='dots' x='0' y='0' width='16' height='16' patternUnits='userSpaceOnUse'><circle cx='3' cy='3' r='2' fill='%23199416' opacity='0.12'/></pattern><rect width='100' height='100' fill='url(%23dots)'/></svg>");
+    background-size: contain;
+}
+
+.faq-section .decor-bottom-right {
+    bottom: 5%;
+    right: 2%;
+    width: 120px;
+    height: 120px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='none'><pattern id='dots2' x='0' y='0' width='16' height='16' patternUnits='userSpaceOnUse'><circle cx='3' cy='3' r='2' fill='%23199416' opacity='0.12'/></pattern><rect width='100' height='100' fill='url(%23dots2)'/></svg>");
+    background-size: contain;
+}
+
+/* Header Decor & Badge */
+.faq-pill-badge {
+    font-family: 'Outfit', sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+    color: #ffffff;
+    background-color: var(--primary-color);
+    padding: 4px 12px;
+    border-radius: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(25, 148, 22, 0.15);
+}
+
+.faq-header-wrap .badge-line {
+    height: 1.5px;
+    width: 24px;
+    background-color: rgba(25, 148, 22, 0.15);
+}
+
+.faq-header-wrap .line-left {
+    margin-right: 10px;
+}
+
+.faq-header-wrap .line-right {
+    margin-left: 10px;
+}
+
+.faq-section-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 26px;
+    font-weight: 900;
+    color: var(--dark-navy);
+    letter-spacing: -0.5px;
+}
+
+.faq-title-truck-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 6px;
+}
+
+.faq-title-truck-wrap .truck-icon-container {
+    position: relative;
+    display: inline-block;
+    color: var(--primary-color);
+}
+
+.faq-title-truck-wrap .truck-icon {
+    font-size: 18px;
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+}
+
+.faq-section-subtitle {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Accordion Grid Cards */
+.faq-card {
+    background: #ffffff;
+    border: 1px solid rgba(25, 148, 22, 0.08);
+    border-radius: 10px;
+    padding: 10px 14px;
+    box-shadow: 0 4px 15px rgba(25, 148, 22, 0.01);
+    transition: all 0.3s ease;
+}
+
+.faq-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(25, 148, 22, 0.05);
+    border-color: rgba(25, 148, 22, 0.2);
+}
+
+.faq-card:has(.faq-card-header:not(.collapsed)) {
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 25px rgba(25, 148, 22, 0.06);
+}
+
+.faq-card-header {
+    outline: none;
+    cursor: pointer;
+}
+
+.faq-icon-wrap {
+    width: 32px;
+    height: 32px;
+    background-color: rgba(25, 148, 22, 0.05);
+    border-radius: 50%;
+    color: var(--primary-color);
+    font-size: 14px;
+    flex-shrink: 0;
+    margin-right: 12px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq-card:hover .faq-icon-wrap {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.faq-card:has(.faq-card-header:not(.collapsed)) .faq-icon-wrap {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.faq-question {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--dark-navy);
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+.faq-card-header:not(.collapsed) .faq-question {
+    color: var(--primary-color);
+}
+
+.faq-toggle-btn {
+    width: 20px;
+    height: 20px;
+    color: var(--primary-color);
+    font-size: 15px;
+    font-weight: bold;
+    flex-shrink: 0;
+    margin-left: 12px;
+}
+
+.faq-toggle-icon {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.faq-card-header[aria-expanded="true"] .faq-toggle-icon {
+    transform: rotate(45deg);
+    color: var(--text-muted);
+}
+
+.faq-card-body {
+    padding-top: 6px;
+    padding-left: 44px;
+}
+
+.faq-answer {
+    font-family: 'Outfit', sans-serif;
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Footer Banner */
+.faq-help-banner {
+    max-width: 600px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-navy) 100%);
+    border-radius: 10px;
+    padding: 12px 20px;
+    box-shadow: 0 10px 25px rgba(25, 148, 22, 0.12);
+    transition: all 0.3s ease;
+    z-index: 5;
+    position: relative;
+    color: #ffffff;
+}
+
+.faq-help-banner:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(25, 148, 22, 0.2);
+}
+
+.faq-help-banner .help-icon-wrap {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 16px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq-help-banner .help-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13.5px;
+    font-weight: 700;
+}
+
+.faq-help-banner .help-desc {
+    font-family: 'Outfit', sans-serif;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.faq-help-banner .help-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.6);
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.faq-help-banner .help-link:hover {
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
 }
