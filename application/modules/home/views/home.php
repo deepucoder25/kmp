@@ -2,6 +2,7 @@
 
 // Load the Services grid widget
 $this->load->view('service_widget');
+$this->load->view('process_widget');
 
 // Load the About Us widget
 $this->load->view('about_widget');
