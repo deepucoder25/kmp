@@ -734,4 +734,45 @@
     }
 }
 
+/* ==========================================================================
+   BREADCRUMBS GLASSMORPHIC DESIGN
+   ========================================================================== */
+.pm-city-slider-nav {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 30px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.pm-city-slider-nav a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.pm-city-slider-nav a:hover {
+    color: var(--secondary-color);
+}
+
+.pm-city-slider-nav .bc-sep {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 14px;
+    display: inline-block;
+    line-height: 1;
+}
+
+.pm-city-slider-nav .bc-current {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
 

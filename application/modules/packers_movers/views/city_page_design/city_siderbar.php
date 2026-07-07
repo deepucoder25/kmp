@@ -9,150 +9,148 @@
 
 <aside class="pm-city-sidebar">
 
-  <!-- CTA Contact Card -->
-  <div class="pm-city-sidebar-widget pm-city-cta-card">
-    <!-- Decorative BG icon -->
-    <i class="bi bi-headset pm-city-cta-bg-icon"></i>
-
-    <div class="pm-city-cta-inner">
-      <div class="pm-city-cta-icon-wrap">
-        <i class="bi bi-headset"></i>
-      </div>
-      <h4 class="pm-city-cta-title">Need Help Moving in <span><?= $city ?></span>?</h4>
-      <p class="pm-city-cta-desc">Get a free consultation from our shifting experts. Available 24/7.</p>
-
-      <div class="pm-city-cta-buttons">
-        <!-- Primary Phone -->
-        <a href="<?= $phonehtml ?>" class="pm-city-cta-btn pm-city-cta-call" id="sidebarCallBtn">
+  <!-- Redesigned Need Help Moving Card -->
+  <div class="sidebar-help-widget text-center">
+    <div class="help-phone-circle">
+      <i class="bi bi-telephone-fill"></i>
+    </div>
+    
+    <h3 class="help-title">Need Help Moving?</h3>
+    <p class="help-subtitle">Talk to our relocation experts now.</p>
+    
+    <div class="help-badge-pill">
+      We're Available 24/7
+    </div>
+    
+    <div class="help-btn-list">
+      <!-- Call Support 1 -->
+      <a href="<?= $phonehtml ?>" class="help-btn-card">
+        <span class="help-card-icon-circle">
           <i class="bi bi-telephone-fill"></i>
-          <div>
-            <small>Call Support &nbsp;<span class="pm-city-badge-live">LIVE</span></small>
-            <strong><?= $phone ?></strong>
-          </div>
-        </a>
+        </span>
+        <span class="help-card-text">
+          <span class="help-card-label">Call Support 1</span>
+          <span class="help-card-value"><?= $phone ?></span>
+        </span>
+        <i class="bi bi-chevron-right help-card-arrow"></i>
+      </a>
 
-        <!-- Alternate Phone -->
-        <a href="<?= $phonehtml1 ?>" class="pm-city-cta-btn pm-city-cta-alt-call" id="sidebarAltCallBtn">
-          <i class="bi bi-telephone"></i>
-          <div>
-            <small>Alternate Line</small>
-            <strong><?= $phone1 ?></strong>
-          </div>
-        </a>
+      <?php if (!empty($phone1)): ?>
+      <!-- Call Support 2 -->
+      <a href="<?= $phonehtml1 ?>" class="help-btn-card">
+        <span class="help-card-icon-circle bg-orange-icon">
+          <i class="bi bi-telephone-fill"></i>
+        </span>
+        <span class="help-card-text">
+          <span class="help-card-label">Call Support 2</span>
+          <span class="help-card-value"><?= $phone1 ?></span>
+        </span>
+        <i class="bi bi-chevron-right help-card-arrow"></i>
+      </a>
+      <?php endif; ?>
+      
+      <!-- WhatsApp Button -->
+      <a href="<?= $whatsapphtml ?>" target="_blank" rel="noopener" class="help-btn-card">
+        <span class="help-card-icon-circle bg-whatsapp-icon">
+          <i class="bi bi-whatsapp"></i>
+        </span>
+        <span class="help-card-text">
+          <span class="help-card-label">WhatsApp Chat</span>
+          <span class="help-card-value"><?= $phone ?></span>
+        </span>
+        <i class="bi bi-chevron-right help-card-arrow"></i>
+      </a>
+    </div>
+    
+    <!-- Get Free Quote Solid Button -->
+    <button type="button" class="help-btn-quote-solid" data-bs-toggle="modal" data-bs-target="#qteModal">
+      <i class="bi bi-clipboard-check-fill"></i> Get Free Quote
+    </button>
+  </div>
 
-        <!-- Action Row -->
-        <div class="pm-city-cta-action-row">
-          <a href="<?= $whatsapphtml ?>" target="_blank" rel="noopener" class="pm-city-action-btn pm-city-whatsapp-btn" id="sidebarWhatsAppBtn">
-            <i class="bi bi-whatsapp"></i>
-            WhatsApp
-          </a>
-          <button type="button" class="pm-city-action-btn pm-city-quote-btn" data-bs-toggle="modal" data-bs-target="#qteModal" id="sidebarQuoteBtn">
-            <i class="bi bi-clipboard-check"></i>
-            Get Quote
-          </button>
+  <!-- Redesigned Trust Badges Widget -->
+  <div class="sidebar-trust-widget-transparent mt-4" id="sidebarTrustWidget">
+    <h4 class="trust-widget-title">
+      <i class="bi bi-patch-check-fill text-success"></i> Why Choose <?= $company3 ?>?
+    </h4>
+    <div class="trust-widget-line"></div>
+    
+    <ul class="trust-widget-list">
+      <li class="trust-item item-blue">
+        <div class="trust-icon-box">
+          <i class="bi bi-clock-history"></i>
         </div>
+        <div class="trust-content">
+          <strong><?= $yearsExperience ?> Years Experience</strong>
+          <span>Trusted since <?= $startYear ?></span>
+        </div>
+      </li>
+      <li class="trust-item item-green">
+        <div class="trust-icon-box">
+          <i class="bi bi-people-fill"></i>
+        </div>
+        <div class="trust-content">
+          <strong><?= $happyClients ?> Happy Clients</strong>
+          <span>Families and businesses trust us</span>
+        </div>
+      </li>
+      <li class="trust-item item-orange">
+        <div class="trust-icon-box">
+          <i class="bi bi-patch-check-fill"></i>
+        </div>
+        <div class="trust-content">
+          <strong>Verified & Licensed</strong>
+          <span>ISO certified packers and movers</span>
+        </div>
+      </li>
+      <li class="trust-item item-red">
+        <div class="trust-icon-box">
+          <i class="bi bi-shield-fill-check"></i>
+        </div>
+        <div class="trust-content">
+          <strong><?= $secureShifting ?> Secure Shifting</strong>
+          <span>Complete transit insurance options</span>
+        </div>
+      </li>
+      <li class="trust-item item-yellow">
+        <div class="trust-icon-box">
+          <i class="bi bi-geo-alt-fill"></i>
+        </div>
+        <div class="trust-content">
+          <strong>Pan-India Coverage</strong>
+          <span>100+ branches across <?= $statesCovered ?> states</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Related Locations (Nearby Cities) -->
+  <div class="sidebar-nearby-widget mt-4" id="sidebarRelatedLocations">
+    <div class="nearby-header d-flex align-items-start justify-content-between">
+      <div class="nearby-header-left">
+        <h4 class="nearby-title">
+          <i class="bi bi-geo-alt-fill text-green"></i> Nearby Cities
+        </h4>
+        <p class="nearby-subtitle">Packers and Movers near <?= $city ?>.</p>
+      </div>
+      <div class="nearby-decor-wrap d-none d-sm-block">
+        <i class="bi bi-map opacity-25" style="font-size: 24px; color: var(--primary-color);"></i>
       </div>
     </div>
-  </div>
-
-  <!-- Services Widget -->
-  <div class="pm-city-sidebar-widget mt-4" id="sidebarServicesWidget">
-    <h4 class="pm-city-sidebar-widget-title">
-      <i class="bi bi-grid-3x3-gap-fill me-2"></i>Our Services
-    </h4>
-    <p class="pm-city-sidebar-widget-desc">Expert relocation solutions in <?= $city ?>.</p>
-    <ul class="pm-city-services-list" id="citySidebarServiceList">
-      <?php
-      $sidebar_services = [
-        ['slug' => 'home-shifting',         'name' => 'Home Shifting',         'icon' => 'bi-house-heart-fill'],
-        ['slug' => 'office-relocation',     'name' => 'Office Relocation',     'icon' => 'bi-building-gear'],
-        ['slug' => 'car-transportation',    'name' => 'Car Transportation',    'icon' => 'bi-car-front-fill'],
-        ['slug' => 'bike-transportation',   'name' => 'Bike Transportation',   'icon' => 'bi-bicycle'],
-        ['slug' => 'warehouse-and-storage', 'name' => 'Warehouse & Storage',   'icon' => 'bi-box-seam-fill'],
-        ['slug' => 'domestic-relocation',   'name' => 'Domestic Relocation',   'icon' => 'bi-truck'],
-        ['slug' => 'local-shifting',        'name' => 'Local Shifting',        'icon' => 'bi-geo-alt-fill'],
-        ['slug' => 'intercity-shifting',    'name' => 'Intercity Shifting',    'icon' => 'bi-signpost-split-fill'],
-      ];
-      foreach ($sidebar_services as $srv):
-      ?>
-      <li>
-        <a href="<?= site_url($srv['slug']) ?>" class="pm-city-service-link" id="sidebarService-<?= $srv['slug'] ?>">
-          <span class="pm-city-svc-icon"><i class="bi <?= $srv['icon'] ?>"></i></span>
-          <span class="pm-city-svc-name"><?= $srv['name'] ?></span>
-          <i class="bi bi-chevron-right pm-city-svc-arrow"></i>
-        </a>
-      </li>
-      <?php endforeach; ?>
-    </ul>
-    <a href="<?= site_url('our-services') ?>" class="pm-city-view-all-btn" id="sidebarViewAllServices">
-      <i class="bi bi-grid me-1"></i> View All Services
-      <i class="bi bi-arrow-right ms-1"></i>
-    </a>
-  </div>
-
-  <!-- Trust Badges Widget -->
-  <div class="pm-city-sidebar-widget mt-4" id="sidebarTrustWidget">
-    <h4 class="pm-city-sidebar-widget-title">
-      <i class="bi bi-patch-check-fill me-2 text-success"></i>Why Choose <?= $company3 ?>?
-    </h4>
-    <ul class="pm-city-trust-list">
-      <li>
-        <div class="pm-city-trust-icon-wrap"><i class="bi bi-clock-history"></i></div>
-        <div>
-          <strong><?= $yearsExperience ?> Years Experience</strong>
-          <small>Trusted since <?= $startYear ?></small>
-        </div>
-      </li>
-      <li>
-        <div class="pm-city-trust-icon-wrap pm-city-trust-green"><i class="bi bi-people-fill"></i></div>
-        <div>
-          <strong><?= $happyClients ?> Happy Clients</strong>
-          <small>Families and businesses trust us</small>
-        </div>
-      </li>
-      <li>
-        <div class="pm-city-trust-icon-wrap pm-city-trust-orange"><i class="bi bi-patch-check-fill"></i></div>
-        <div>
-          <strong>Verified & Licensed</strong>
-          <small>ISO certified packers and movers</small>
-        </div>
-      </li>
-      <li>
-        <div class="pm-city-trust-icon-wrap pm-city-trust-red"><i class="bi bi-shield-fill-check"></i></div>
-        <div>
-          <strong><?= $secureShifting ?> Secure Shifting</strong>
-          <small>Complete transit insurance options</small>
-        </div>
-      </li>
-      <li>
-        <div class="pm-city-trust-icon-wrap pm-city-trust-yellow"><i class="bi bi-geo-alt-fill"></i></div>
-        <div>
-          <strong>Pan-India Coverage</strong>
-          <small>100+ branches across <?= $statesCovered ?> states</small>
-        </div>
-      </li>
-    </ul>
-  </div>
-
-  <!-- Related Locations -->
-  <div class="pm-city-sidebar-widget mt-4" id="sidebarRelatedLocations">
-    <h4 class="pm-city-sidebar-widget-title">
-      <i class="bi bi-pin-map-fill me-2"></i>Nearby Cities
-    </h4>
-    <p class="pm-city-sidebar-widget-desc">Packers and Movers near <?= $city ?>.</p>
-    <div class="pm-city-related-tags" id="relatedCityTags">
+    
+    <div class="nearby-tags-grid" id="relatedCityTags">
       <?php
       $count = 0;
       foreach ($cities as $ct):
         if ($ct['nm'] == $city) continue;
-        if ($count >= 10) break;
+        if ($count >= 8) break;
         $link      = urlencode(strtolower(str_replace(" ", "-", $ct['nm'])));
         $statename = urlencode(strtolower(str_replace(" ", "-", $st)));
       ?>
       <a href="<?= site_url("$link-packers-movers-$statename") ?>"
-         class="pm-city-tag"
+         class="nearby-tag"
          id="relatedCity-<?= $count ?>">
-        <i class="bi bi-arrow-right-short"></i><?= $ct['nm'] ?>
+        <span class="tag-arrow">&rarr;</span> <?= $ct['nm'] ?>
       </a>
       <?php
         $count++;
