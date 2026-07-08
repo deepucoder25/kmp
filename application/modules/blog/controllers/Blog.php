@@ -14,9 +14,22 @@ class Blog extends MX_Controller {
     }
 
     private function loadBlogs() {
-        $path = FCPATH . 'admin_data/blogs.json';
-        if (!file_exists($path)) return [];
-        return json_decode(file_get_contents($path), true) ?: [];
+        $this->load->database();
+        if (!$this->db->table_exists('blog')) {
+            return [];
+        }
+        $query = $this->db->order_by('b_id', 'asc')->get('blog');
+        $blogs = $query->result_array();
+
+        foreach ($blogs as &$b) {
+            $b['id'] = $b['b_id'];
+            if (!empty($b['date']) && !empty($b['time'])) {
+                $b['created_at'] = date('Y-m-d H:i:s', strtotime($b['date'] . ' ' . $b['time']));
+            } else {
+                $b['created_at'] = date('Y-m-d H:i:s');
+            }
+        }
+        return $blogs;
     }
 
     function index() {
@@ -102,7 +115,7 @@ class Blog extends MX_Controller {
             $data['description'] = word_limiter(strip_tags($selected_blog->description), 200);
             
             $image_file = $selected_blog->image;
-            $data['img'] = ($image_file && file_exists(FCPATH . 'uploads/blogs/' . $image_file)) ? base_url('uploads/blogs/'.$image_file) : base_url('assets/images/about/packers_movers.jpg');
+            $data['img'] = ($image_file && file_exists(FCPATH . 'assets/uploads/blog/' . $image_file)) ? base_url('assets/uploads/blog/'.$image_file) : base_url('assets/images/about/packers_movers.jpg');
             
             $data['module'] = "blog";
             $data['view_file'] = "view"; 

@@ -9,15 +9,15 @@
 ]);
 ?>
 
-    <div class="reviews-service-page reviews-feature-content-section">
+    <section class="reviews-service-page reviews-feature-content-section">
         <div ng-app="reviewsApp" ng-controller="reviewsctrl">
             <br />
             <div class="container">
-                <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 pb-2 mb-3" class="reviews-header-wrap">
-                    <h3 class="m-0" class="reviews-header-title">
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 pb-2 mb-3 reviews-header-wrap">
+                    <h3 class="m-0 reviews-header-title">
                         <i class="bi bi-chat-left-quote me-2"></i>Customer Experiences
                     </h3>
-                    <button class="btn btn-primary rounded-pill px-4 shadow-sm" class="reviews-write-btn" data-bs-toggle="modal" data-bs-target="#reviewModal">
+                    <button class="btn btn-primary rounded-pill px-4 shadow-sm reviews-write-btn" data-bs-toggle="modal" data-bs-target="#reviewModal">
                         <i class="bi bi-pencil-square me-1"></i> Write a Review
                     </button>
                     <div class="reviews-header-line"></div>
