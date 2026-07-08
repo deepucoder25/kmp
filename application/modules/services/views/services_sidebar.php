@@ -7,6 +7,39 @@ $secureShifting = isset($secureShifting) ? $secureShifting : '100%';
 $company3 = isset($company3) ? $company3 : 'Kiran Packers Movers';
 ?>
 <aside class="company-sidebar">
+    <!-- Our Services Navigation Menu -->
+    <div class="sidebar-widget widget-services mb-4">
+        <h3 class="widget-title">Our Services</h3>
+        <ul class="sidebar-services-list" id="servicesSidebarList">
+            <?php
+            $sidebar_services = [
+                ['slug' => 'household-shifting',     'name' => 'Household Shifting', 'icon' => 'bi-house-fill'],
+                ['slug' => 'office-relocation',      'name' => 'Office Relocation',  'icon' => 'bi-building-fill'],
+                ['slug' => 'packing-and-unpacking',  'name' => 'Packing & Safety',   'icon' => 'bi-box-seam-fill'],
+                ['slug' => 'loading-and-unloading',  'name' => 'Loading & Unloading','icon' => 'bi-truck-flatbed'],
+                ['slug' => 'bike-transportation',    'name' => 'Bike Transport',     'icon' => 'bi-bicycle'],
+                ['slug' => 'car-transportation',     'name' => 'Car Transport',      'icon' => 'bi-car-front-fill'],
+                ['slug' => 'warehouse-storage',      'name' => 'Warehouse Storage',  'icon' => 'bi-database-fill-gear'],
+                ['slug' => 'door-to-door-shifting',  'name' => 'Door-to-Door',       'icon' => 'bi-door-open-fill'],
+                ['slug' => 'cargo-services',         'name' => 'Cargo Services',     'icon' => 'bi-airplane-fill'],
+            ];
+
+            $active_link = isset($active_link) ? $active_link : '';
+            foreach ($sidebar_services as $s):
+                $is_active = ($active_link === $s['slug']) ? 'active' : '';
+            ?>
+                <li>
+                    <a href="<?= site_url($s['slug']) ?>" class="d-flex align-items-center justify-content-between <?= $is_active ?>">
+                        <span class="d-flex align-items-center gap-2">
+                            <i class="bi <?= $s['icon'] ?> service-icon"></i>
+                            <span class="service-name"><?= $s['name'] ?></span>
+                        </span>
+                        <i class="bi bi-chevron-right arrow-icon"></i>
+                    </a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
 
     <!-- Redesigned Need Help Moving Card -->
     <div class="sidebar-help-widget text-center">
