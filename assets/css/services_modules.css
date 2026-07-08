@@ -969,3 +969,61 @@
     color: var(--white);
     transform: translateX(2px);
 }
+
+/* 12. Two Column Sticky Sidebar Links */
+.company-sidebar .sidebar-services-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.company-sidebar .sidebar-services-list li {
+    margin-bottom: 0 !important;
+}
+.company-sidebar .sidebar-services-list li:last-child {
+    grid-column: span 2;
+}
+.company-sidebar .sidebar-services-list li a {
+    padding: 12px 10px !important;
+    font-size: 13px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    border-radius: 12px !important;
+    background-color: #f8fafc !important;
+    border: 1px solid #f1f5f9 !important;
+    color: var(--text-dark) !important;
+    font-weight: 700 !important;
+    transition: var(--transition-smooth) !important;
+}
+.company-sidebar .sidebar-services-list li a .arrow-icon {
+    display: none !important;
+}
+.company-sidebar .sidebar-services-list li a .service-icon {
+    font-size: 15px !important;
+    color: var(--primary-color) !important;
+    transition: var(--transition-smooth) !important;
+}
+/* Alternating icon colors for visually interesting links */
+.company-sidebar .sidebar-services-list li:nth-child(even) a .service-icon {
+    color: var(--secondary-color) !important;
+}
+
+/* Hover and Active states using navigation.css color variables */
+.company-sidebar .sidebar-services-list li a:hover:not(.active) {
+    background-color: rgba(25, 148, 22, 0.06) !important;
+    border-color: rgba(25, 148, 22, 0.2) !important;
+    color: var(--primary-color) !important;
+}
+.company-sidebar .sidebar-services-list li a:hover:not(.active) .service-icon {
+    color: var(--primary-color) !important;
+}
+.company-sidebar .sidebar-services-list li a.active {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #157912 100%) !important;
+    border-color: var(--primary-color) !important;
+    color: var(--white) !important;
+    box-shadow: 0 4px 12px rgba(25, 148, 22, 0.15) !important;
+}
+.company-sidebar .sidebar-services-list li a.active .service-icon {
+    color: var(--white) !important;
+}

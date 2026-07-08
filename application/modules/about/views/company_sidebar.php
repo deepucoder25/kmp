@@ -1,17 +1,4 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
-
-$phone = isset($phone) ? $phone : '+91 0000000000';
-$phone1 = isset($phone1) ? $phone1 : '';
-$phonehtml = isset($phonehtml) ? $phonehtml : 'tel:0000000000';
-$phonehtml1 = isset($phonehtml1) ? $phonehtml1 : '';
-$whatsapphtml = isset($whatsapphtml) ? $whatsapphtml : 'https://wa.me/0000000000';
-$active_link = isset($active_link) ? $active_link : '';
-
-$yearsExperience = isset($yearsExperience) ? $yearsExperience : '8+';
-$startYear = isset($startYear) ? $startYear : '2018';
-$happyClients = isset($happyClients) ? $happyClients : '10,000+';
-$secureShifting = isset($secureShifting) ? $secureShifting : '100%';
-$company3 = isset($company3) ? $company3 : 'Kiran Packers Movers';
 ?>
 <aside class="company-sidebar">
     <!-- Company Navigation Menu -->
@@ -20,13 +7,13 @@ $company3 = isset($company3) ? $company3 : 'Kiran Packers Movers';
         <ul class="sidebar-services-list" id="companySidebarList">
             <?php
             $sidebar_links = [
-                ['slug' => 'about-us',        'name' => 'About Us',         'icon' => 'bi-info-circle-fill'],
-                ['slug' => 'why-choose-us',   'name' => 'Why Choose Us',    'icon' => 'bi-patch-check-fill'],
-                ['slug' => 'our-branches',    'name' => 'Our Branches',     'icon' => 'bi-geo-alt-fill'],
-                ['slug' => 'photo-gallery',   'name' => 'Photo Gallery',    'icon' => 'bi-images'],
-                ['slug' => 'video-gallery',   'name' => 'Video Gallery',    'icon' => 'bi-play-btn-fill'],
-                ['slug' => 'testimonials',    'name' => 'Testimonials',     'icon' => 'bi-star-fill'],
-                ['slug' => 'faqs',            'name' => 'FAQ',              'icon' => 'bi-question-circle-fill'],
+                ['slug' => 'about-us',             'name' => 'About Us',          'icon' => 'bi-info-circle-fill'],
+                ['slug' => 'why-choose-us',        'name' => 'Why Choose Us',     'icon' => 'bi-patch-check-fill'],
+                ['slug' => 'photo-gallery',        'name' => 'Photo Gallery',     'icon' => 'bi-images'],
+                ['slug' => 'testimonials',         'name' => 'Testimonial',       'icon' => 'bi-star-fill'],
+                ['slug' => 'faqs',                 'name' => 'FAQ',               'icon' => 'bi-question-circle-fill'],
+                ['slug' => 'privacy-policy',       'name' => 'Privacy Policy',    'icon' => 'bi-shield-lock-fill'],
+                ['slug' => 'terms-and-conditions', 'name' => 'Terms & Conditions','icon' => 'bi-file-earmark-text-fill'],
             ];
 
             foreach ($sidebar_links as $l):
