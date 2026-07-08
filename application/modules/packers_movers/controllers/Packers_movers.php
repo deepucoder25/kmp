@@ -66,7 +66,7 @@ class Packers_movers extends MX_Controller
         $data = array(
             "city" => $city,
             "state" => $state,
-            'img' => base_url('assets') . "/images/state/google/$statelink.png",
+            // 'img' => base_url('assets') . "/images/state/google/$statelink.png",
             "title" => $seo['title'],
             "description" => $seo['desc'],
             "keywords" => "movers and packers in $city, Packers and movers in $city, Movers near me $city, Moving companies near me $city, Best packers and movers in $city, House shifting in $city, local shifting, " . $this->comp['company3'] . " $city",

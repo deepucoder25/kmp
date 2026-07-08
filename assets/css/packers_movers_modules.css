@@ -471,3 +471,198 @@
         height: auto;
     }
 }
+
+/* Our Presence Across India - States & Branches Layout Styles */
+
+.pm-states-title-span {
+    color: var(--primary-color);
+}
+
+.pm-states-card {
+    height: 270px;
+    border: none !important;
+    background: #091a0c;
+    box-shadow: 0 10px 30px rgba(9, 26, 12, 0.08) !important;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pm-states-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(25, 148, 22, 0.2) !important;
+}
+
+.pm-states-link-wrapper {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none !important;
+}
+
+.pm-states-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pm-states-card:hover .pm-states-card-img {
+    transform: scale(1.08) rotate(0.01deg);
+}
+
+.pm-states-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(9, 26, 12, 0) 20%,
+        rgba(9, 26, 12, 0.4) 50%,
+        rgba(9, 26, 12, 0.95) 100%
+    );
+    transition: opacity 0.4s ease;
+}
+
+.pm-states-card:hover .pm-states-gradient {
+    background: linear-gradient(
+        to bottom,
+        rgba(9, 26, 12, 0.1) 10%,
+        rgba(9, 26, 12, 0.6) 40%,
+        rgba(25, 148, 22, 0.85) 100%
+    );
+}
+
+.pm-states-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transform: translateY(12px);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pm-states-card:hover .pm-states-content {
+    transform: translateY(0);
+}
+
+.pm-states-badge {
+    align-self: flex-start;
+    background: rgba(255, 128, 13, 0.2);
+    color: var(--secondary-light);
+    border: 1px solid rgba(255, 128, 13, 0.3);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.pm-states-card:hover .pm-states-badge {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--white);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.pm-states-title {
+    color: var(--white) !important;
+    font-size: 1.35rem;
+    font-weight: 800;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.pm-states-action {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.85rem;
+    font-weight: 600;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pm-states-card:hover .pm-states-action {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.pm-states-action i {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.pm-states-action:hover i {
+    transform: translateX(4px);
+}
+
+/* Branch City Links List Layout Styles */
+
+.pm-list-service-page {
+    background-color: var(--white);
+    padding: 50px 0;
+}
+
+.pm-list-feature-section {
+    position: relative;
+}
+
+.pm-list-city-card {
+    background: var(--white);
+    border: 1px solid rgba(25, 148, 22, 0.08) !important;
+    border-radius: 12px;
+    padding: 16px 12px !important;
+    box-shadow: 0 4px 10px rgba(9, 26, 12, 0.02) !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pm-list-city-card-link:hover .pm-list-city-card {
+    transform: translateY(-4px);
+    border-color: rgba(25, 148, 22, 0.18) !important;
+    box-shadow: 0 10px 20px rgba(25, 148, 22, 0.06) !important;
+    background: var(--light-bg);
+}
+
+.pm-list-icon-circle {
+    width: 40px;
+    height: 40px;
+    background: rgba(25, 148, 22, 0.08);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 1.15rem;
+    transition: all 0.3s ease;
+}
+
+.pm-list-city-card-link:hover .pm-list-icon-circle {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+.pm-list-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--dark-navy);
+    margin: 0;
+    transition: color 0.3s ease;
+    word-break: break-word;
+}
+
+.pm-list-city-card-link:hover .pm-list-title {
+    color: var(--primary-hover);
+}

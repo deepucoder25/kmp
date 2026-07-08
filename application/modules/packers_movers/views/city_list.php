@@ -27,17 +27,13 @@ $state = ucwords($state);
                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 mb-3">
                     <a href="<?= site_url("$link-packers-movers-$statename") ?>"
                         class="pm-list-city-card-link d-block h-100 text-decoration-none">
-                        <div class="pm-list-city-card card border-0 shadow h-100">
-                            <div class="card-body pm-list-card-body">
-                                <!-- Truck Icon on Left -->
-                                <div class="pm-list-icon">
-                                    <i class="bi bi-truck"></i>
-                                </div>
-                                <!-- Title on Right -->
-                                <div class="pm-list-city-name">
-                                    <h5>Packers and Movers <b><?= $ct['nm'] ?></b></h5>
-                                </div>
+                        <div class="pm-list-city-card text-center h-100">
+                            <!-- Location Icon -->
+                            <div class="pm-list-icon-circle">
+                                <i class="bi bi-geo-alt"></i>
                             </div>
+                            <!-- City Name -->
+                            <h6 class="pm-list-title mb-0"><?= htmlspecialchars($ct['nm']) ?></h6>
                         </div>
                     </a>
                 </div>

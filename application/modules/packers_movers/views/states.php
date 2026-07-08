@@ -10,20 +10,9 @@
 <?php
 $state = [
     [
-        "image" => "maharashtra.jpg",
-        "category" => "Maharashtra",
-        "link" => "maharashtra"
-    ],
-    [
-        "image" => "bangalore.jpg",
-        "category" => "Bangalore",
-        "link" => "bangalore"
-    ],
-
-    [
-        "image" => "west-bengal.jpg",
-        "category" => "West Bengal",
-        "link" => "west-bengal"
+        "image" => "haryana.jpg",
+        "category" => "Haryana",
+        "link" => "haryana"
     ],
     [
         "image" => "uttar-pradesh.jpg",
@@ -52,34 +41,26 @@ $state = [
             <?php foreach ($state as $item): ?>
 
                 <!-- 4 Columns in One Row on Desktop -->
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-
-                    <div class="pm-states-card bg-white rounded-4 overflow-hidden shadow-sm h-100">
-
-                        <!-- Image -->
-                        <div class="pm-states-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="<?= base_url() ?>/assets/images/state/<?= $item['image'] ?>"
-                                alt="<?= $item['category'] ?>">
-
-                            <div class="pm-states-overlay">
-                                <a href="<?= site_url($item['link']) ?>" class="btn btn-warning btn-sm rounded-pill px-3">
-                                    View
-                                </a>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                    <div class="pm-states-card position-relative rounded-4 overflow-hidden shadow">
+                        <a href="<?= site_url($item['link']) ?>" class="pm-states-link-wrapper">
+                            <!-- Image -->
+                            <img class="pm-states-card-img" src="<?= base_url('assets/images/state/' . $item['image']) ?>" alt="<?= $item['category'] ?>">
+                            
+                            <!-- Gradient Overlay -->
+                            <div class="pm-states-gradient"></div>
+                            
+                            <!-- Card Content -->
+                            <div class="pm-states-content">
+                                <span class="pm-states-badge">Branch Office</span>
+                                <h4 class="pm-states-title"><?= htmlspecialchars($item['category']) ?></h4>
+                                <div class="pm-states-action">
+                                    <span>Explore Services</span>
+                                    <i class="bi bi-arrow-right"></i>
+                                </div>
                             </div>
-                        </div>
-
-                        <!-- Content -->
-                        <div class="p-3 text-start d-flex align-items-center gap-2">
-                            <span class="pm-states-yellow-dash"></span>
-                            <h6 class="fw-semibold mb-0">
-                                <a href="<?= site_url($item['link']) ?>" class="text-dark text-decoration-none">
-                                    <?= htmlspecialchars($item['category']) ?>
-                                </a>
-                            </h6>
-                        </div>
-
+                        </a>
                     </div>
-
                 </div>
 
             <?php endforeach; ?>
