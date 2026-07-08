@@ -62,11 +62,11 @@ $floatingWhatsappLink = !empty($whatsapphtml)
             <ul>
               <li><a href="<?= site_url('about-us') ?>">About Us</a></li>
               <li><a href="<?= site_url('why-choose-us') ?>">Why Choose Us</a></li>
-              <li><a href="<?= site_url('our-branches') ?>">Our Branches</a></li>
-              <li><a href="<?= site_url('testimonials') ?>">Testimonial</a></li>
-              <li><a href="<?= site_url('faqs') ?>">FAQ</a></li>
+              <li><a href="<?= site_url('our-branches') ?>">Locations</a></li>
               <li><a href="<?= site_url('blog') ?>">Blog</a></li>
+              <li><a href="<?= site_url('reviews') ?>">Reviews</a></li>
               <li><a href="<?= site_url('contact-us') ?>">Contact Us</a></li>
+              <li><a href="<?= site_url('tracking') ?>">Tracking</a></li>
             </ul>
           </div>
         </div>
@@ -76,10 +76,8 @@ $floatingWhatsappLink = !empty($whatsapphtml)
           <div class="footer-widget widget-orange">
             <h4>Useful Links</h4>
             <ul>
-              <li><a href="<?= site_url() ?>">Home</a></li>
-              <li><a href="<?= site_url('our-services') ?>">Services</a></li>
-              <li><a href="<?= site_url('about-us') ?>">About Us</a></li>
-              <li><a href="<?= site_url('contact-us') ?>">Contact Us</a></li>
+              <li><a href="<?= site_url('testimonials') ?>">Testimonials</a></li>
+              <li><a href="<?= site_url('faqs') ?>">FAQs</a></li>
               <li><a href="<?= site_url('privacy-policy') ?>">Privacy Policy</a></li>
               <li><a href="<?= site_url('terms-and-conditions') ?>">Terms &amp; Conditions</a></li>
             </ul>

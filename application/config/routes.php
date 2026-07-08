@@ -19,6 +19,7 @@ $route['blog/([a-z0-9-]+)'] = 'blog/read/$1';
 $route['blog'] = 'blog/view';
 $route['privacy-policy'] = 'about/privacy';
 $route['terms-and-conditions'] = 'about/terms';
+$route['tracking'] = 'tracking/index';
 
 
 // City Services Routes

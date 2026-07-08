@@ -64,6 +64,7 @@ class Reviews extends MX_Controller
         
         $data['reviews'] = $query;
         $data['pagination'] = $this->pagination->create_links();
+        $city = $this->comp['addressRegion'];
         $data['title'] = "Customer Reviews & Ratings | " . $this->comp['company3'];
         $data['description'] = "Read genuine client reviews and ratings about household shifting, office relocation, and vehicle transportation services at " . $this->comp['company3'] . " in " . $city . ".";
         $data['module'] = "reviews";

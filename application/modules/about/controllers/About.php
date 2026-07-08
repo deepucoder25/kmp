@@ -3,6 +3,7 @@ class About extends MX_Controller
 {
     function index()
     {
+        $city = $this->comp['addressRegion'];
         $data['title'] = "About Us | " . $this->comp['company3'];
         $data['description'] = "Learn more about " . $this->comp['company3'] . ", our " . $this->comp['experience'] . " Legacy, infrastructure, expert team, mission, and vision in the packing and moving industry in " . $city . ".";
         $data['module'] = "about";
@@ -12,6 +13,7 @@ class About extends MX_Controller
 
     function choose()
     {
+        $city = $this->comp['addressRegion'];
         $data['title'] = "Why Choose Us | " . $this->comp['company3'];
         $data['description'] = "Discover why customers trust " . $this->comp['company3'] . " in " . $city . " for safe, reliable, and transparently priced shifting, vehicle transport, and corporate relocation services.";
         $data['module'] = "about";
@@ -21,6 +23,7 @@ class About extends MX_Controller
 
     function faqs()
     {
+        $city = $this->comp['addressRegion'];
         $data['title'] = "Frequently Asked Questions (FAQs) | " . $this->comp['company3'];
         $data['description'] = "Get answers to common queries about packing and shifting charges, transit insurance, delivery timeline, tracking, and restricted items at " . $this->comp['company3'] . " in " . $city . ".";
         $data['module'] = "about";
@@ -30,6 +33,7 @@ class About extends MX_Controller
 
     function testimonials()
     {
+        $city = $this->comp['addressRegion'];
         $data['title'] = "Customer Reviews & Testimonials | " . $this->comp['company3'];
         $data['description'] = "Read genuine client testimonials and feedback about " . $this->comp['company3'] . " home shifting, vehicle transportation, and office relocation services in " . $city . ".";
         $data['module'] = "about";

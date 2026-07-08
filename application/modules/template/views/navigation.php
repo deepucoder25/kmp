@@ -20,6 +20,8 @@
     $active_tab = 'blog';
   } elseif ($class === 'contacts' || $segment1 === 'contact-us') {
     $active_tab = 'contact';
+  } elseif ($class === 'reviews' || $segment1 === 'reviews') {
+    $active_tab = 'reviews';
   } elseif ($class === 'tracking' || $segment1 === 'tracking') {
     $active_tab = 'tracking';
   }
@@ -98,6 +100,7 @@
       ["@type" => "SiteNavigationElement", "name" => "Services", "url" => site_url('our-services')],
       ["@type" => "SiteNavigationElement", "name" => "Locations", "url" => site_url('our-branches')],
       ["@type" => "SiteNavigationElement", "name" => "Blog", "url" => site_url('blog')],
+      ["@type" => "SiteNavigationElement", "name" => "Reviews", "url" => site_url('reviews')],
       ["@type" => "SiteNavigationElement", "name" => "Contact Us", "url" => site_url('contact-us')],
       ["@type" => "SiteNavigationElement", "name" => "Track", "url" => site_url('tracking')]
     ]
@@ -130,10 +133,16 @@
                 href="<?= site_url('about-us') ?>"><i class="bi bi-people me-2"></i> About Us</a></li>
             <li><a class="dropdown-item<?= $segment1 === 'why-choose-us' ? ' active' : '' ?>"
                 href="<?= site_url('why-choose-us') ?>"><i class="bi bi-check-circle me-2"></i> Why Choose Us</a></li>
+            <li><a class="dropdown-item<?= $segment1 === 'photo-gallery' ? ' active' : '' ?>"
+                href="<?= site_url('photo-gallery') ?>"><i class="bi bi-image me-2"></i> Photo Gallery</a></li>
             <li><a class="dropdown-item<?= $segment1 === 'faqs' ? ' active' : '' ?>"
                 href="<?= site_url('faqs') ?>"><i class="bi bi-question-circle me-2"></i> FAQ</a></li>
             <li><a class="dropdown-item<?= $segment1 === 'testimonials' ? ' active' : '' ?>"
                 href="<?= site_url('testimonials') ?>"><i class="bi bi-chat-left-quote me-2"></i> Testimonial</a></li>
+            <li><a class="dropdown-item<?= $segment1 === 'privacy-policy' ? ' active' : '' ?>"
+                href="<?= site_url('privacy-policy') ?>"><i class="bi bi-shield me-2"></i> Privacy Policy</a></li>
+            <li><a class="dropdown-item<?= $segment1 === 'terms-and-conditions' ? ' active' : '' ?>"
+                href="<?= site_url('terms-and-conditions') ?>"><i class="bi bi-question-circle me-2"></i> Terms & Conditions</a></li>
           </ul>
         </div>
         
@@ -168,10 +177,12 @@
         <a href="<?= site_url('our-branches') ?>"
           class="nav-link<?= $active_tab === 'locations' ? ' active' : '' ?>">Locations</a>
         <a href="<?= site_url('blog') ?>" class="nav-link<?= $active_tab === 'blog' ? ' active' : '' ?>">Blog</a>
+        <a href="<?= site_url('reviews') ?>"
+          class="nav-link<?= $active_tab === 'reviews' ? ' active' : '' ?>">Reviews</a>
+        <a href="<?= site_url('tracking') ?>"
+          class="nav-link<?= $active_tab === 'tracking' ? ' active' : '' ?>">Tracking</a>
         <a href="<?= site_url('contact-us') ?>"
           class="nav-link<?= $active_tab === 'contact' ? ' active' : '' ?>">Contact Us</a>
-        <a href="<?= site_url('tracking') ?>"
-          class="nav-link<?= $active_tab === 'tracking' ? ' active' : '' ?>">Track</a>
       </nav>
 
       <!-- Header Action Buttons -->
@@ -233,9 +244,11 @@
           <div class="mobile-dropdown-menu">
             <a href="<?= site_url('about-us') ?>" class="<?= $segment1 === 'about-us' ? 'active' : '' ?>"><i class="bi bi-people me-2"></i> About Us</a>
             <a href="<?= site_url('why-choose-us') ?>" class="<?= $segment1 === 'why-choose-us' ? 'active' : '' ?>"><i class="bi bi-check-circle me-2"></i> Why Choose Us</a>
+            <a href="<?= site_url('photo-gallery') ?>" class="<?= $segment1 === 'photo-gallery' ? 'active' : '' ?>"><i class="bi bi-image me-2"></i> Photo Gallery</a>
             <a href="<?= site_url('faqs') ?>" class="<?= $segment1 === 'faqs' ? 'active' : '' ?>"><i class="bi bi-question-circle me-2"></i> FAQ</a>
-            <a href="<?= site_url('testimonials') ?>"
-              class="<?= $segment1 === 'testimonials' ? 'active' : '' ?>"><i class="bi bi-chat-left-quote me-2"></i> Testimonial</a>
+            <a href="<?= site_url('testimonials') ?>" class="<?= $segment1 === 'testimonials' ? 'active' : '' ?>"><i class="bi bi-chat-left-quote me-2"></i> Testimonial</a>
+            <a href="<?= site_url('privacy-policy') ?>" class="<?= $segment1 === 'privacy-policy' ? 'active' : '' ?>"><i class="bi bi-shield me-2"></i> Privacy Policy</a>
+            <a href="<?= site_url('terms-and-conditions') ?>" class="<?= $segment1 === 'terms-and-conditions' ? 'active' : '' ?>"><i class="bi bi-question-circle me-2"></i> Terms &amp; Conditions</a>
           </div>
         </div>
 
@@ -274,13 +287,14 @@
         <div class="mobile-nav-item<?= $active_tab === 'blog' ? ' active' : '' ?>">
           <a href="<?= site_url('blog') ?>" class="mobile-nav-link"><i class="bi bi-journal-text me-2"></i> Blog</a>
         </div>
-
+        <div class="mobile-nav-item<?= $active_tab === 'reviews' ? ' active' : '' ?>">
+          <a href="<?= site_url('reviews') ?>" class="mobile-nav-link"><i class="bi bi-star me-2"></i> Reviews</a>
+        </div>
+        <div class="mobile-nav-item<?= $active_tab === 'tracking' ? ' active' : '' ?>">
+          <a href="<?= site_url('tracking') ?>" class="mobile-nav-link"><i class="bi bi-truck me-2"></i> Tracking</a>
+        </div>
         <div class="mobile-nav-item<?= $active_tab === 'contact' ? ' active' : '' ?>">
           <a href="<?= site_url('contact-us') ?>" class="mobile-nav-link"><i class="bi bi-telephone me-2"></i> Contact Us</a>
-        </div>
-
-        <div class="mobile-nav-item<?= $active_tab === 'tracking' ? ' active' : '' ?>">
-          <a href="<?= site_url('tracking') ?>" class="mobile-nav-link"><i class="bi bi-truck me-2"></i> Track</a>
         </div>
       </div>
 
@@ -295,34 +309,55 @@
   </nav>
 
   <script>
-    const openMenu = document.getElementById('openMenu'),
-          closeMenu = document.getElementById('closeMenu'),
-          megaMenu = document.getElementById('megaMenu'),
-          body = document.body,
-          mainHeader = document.getElementById('mainHeader');
+    const openMenu = document.getElementById('openMenu');
+    const closeMenu = document.getElementById('closeMenu');
+    const megaMenu = document.getElementById('megaMenu');
+    const body = document.body;
+    const mainHeader = document.getElementById('mainHeader');
 
-    const toggleMenu = (isOpen) => {
-      megaMenu.classList.toggle('active', isOpen);
-      openMenu.classList.toggle('active', isOpen);
-      body.classList.toggle('menu-open', isOpen);
-    };
+    openMenu.addEventListener('click', () => {
+      megaMenu.classList.add('active');
+      body.classList.add('menu-open');
+    });
 
-    openMenu.onclick = () => toggleMenu(true);
-    closeMenu.onclick = () => toggleMenu(false);
-    megaMenu.onclick = (e) => e.target === megaMenu && toggleMenu(false);
-    document.onkeydown = (e) => {
-      if (e.key === 'Escape') toggleMenu(false);
-    };
-    window.onscroll = () => mainHeader.classList.toggle('scrolled', window.scrollY > 20);
+    closeMenu.addEventListener('click', () => {
+      megaMenu.classList.remove('active');
+      body.classList.remove('menu-open');
+    });
 
-    document.querySelectorAll('.mobile-dropdown-toggle').forEach(btn => {
-      btn.onclick = (e) => {
+    // Toggle mobile dropdown accordions
+    document.querySelectorAll('.mobile-dropdown-toggle').forEach(button => {
+      button.addEventListener('click', (e) => {
         e.preventDefault();
-        const parent = btn.closest('.mobile-nav-item');
+        const parent = button.closest('.mobile-nav-item');
+
+        // Close other open dropdowns (accordion style)
         document.querySelectorAll('.mobile-nav-item.mobile-dropdown').forEach(item => {
-          if (item !== parent) item.classList.remove('active');
+          if (item !== parent) {
+            item.classList.remove('active');
+          }
         });
+
         parent.classList.toggle('active');
-      };
+      });
+    });
+
+    // Close menu when clicking on backdrop overlay
+    megaMenu.addEventListener('click', (e) => {
+      if (e.target === megaMenu) {
+        megaMenu.classList.remove('active');
+        body.classList.remove('menu-open');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        megaMenu.classList.remove('active');
+        body.classList.remove('menu-open');
+      }
+    });
+
+    window.addEventListener('scroll', () => {
+      mainHeader.classList.toggle('scrolled', window.scrollY > 20);
     });
   </script>
