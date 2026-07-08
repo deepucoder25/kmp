@@ -310,7 +310,9 @@
     openMenu.onclick = () => toggleMenu(true);
     closeMenu.onclick = () => toggleMenu(false);
     megaMenu.onclick = (e) => e.target === megaMenu && toggleMenu(false);
-    document.onkeydown = (e) => e.key === 'Escape' && toggleMenu(false);
+    document.onkeydown = (e) => {
+      if (e.key === 'Escape') toggleMenu(false);
+    };
     window.onscroll = () => mainHeader.classList.toggle('scrolled', window.scrollY > 20);
 
     document.querySelectorAll('.mobile-dropdown-toggle').forEach(btn => {
