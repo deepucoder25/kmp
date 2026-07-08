@@ -38,7 +38,7 @@
                         <!-- Featured Image -->
                         <div class="mb-4">
                             <div class="w-100 position-relative overflow-hidden rounded-4 shadow-sm service-featured-img-container">
-                                <img src="<?= base_url('assets/images/services_modules/whatsapp_image_2.jpg') ?>" alt="Packing &amp; Unpacking" class="img-fluid w-100 h-100 object-fit-cover" loading="lazy">
+                                <img src="<?= base_url('assets/images/services_modules/packing_unpacking.jpg') ?>" alt="Packing &amp; Unpacking" class="img-fluid w-100 h-100 object-fit-cover" loading="lazy">
                             </div>
                         </div>
 
