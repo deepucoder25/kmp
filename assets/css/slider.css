@@ -586,6 +586,8 @@
 .input-wrap-custom i.input-icon-custom {
     position: absolute;
     left: 14px;
+    top: 22px;
+    transform: translateY(-50%);
     font-size: 16px;
     color: var(--primary-color);
     pointer-events: none;
@@ -661,7 +663,7 @@
     font-size: 16px;
     color: var(--primary-color);
     pointer-events: none;
-    top: 50%;
+    top: 22px;
     transform: translateY(-50%);
     z-index: 5;
 }
