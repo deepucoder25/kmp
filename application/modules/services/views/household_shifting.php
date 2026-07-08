@@ -3,7 +3,7 @@
 <!-- Breadcrumbs Section -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
     'bc_h1' => 'Household Shifting',
-    'bc_desc' => "Household Shifting Services",
+    'bc_desc' => 'Reliable household shifting services by ' . $company3 . '. Secure packaging, experienced crew, and hassle-free transit for local and domestic relocations.',
     'breadcrumbs' => [
         ['name' => 'Household Shifting']
     ]

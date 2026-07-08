@@ -4,7 +4,7 @@
 <!-- Breadcrumbs Section -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
     'bc_h1' => 'Frequently Asked Questions',
-    'bc_desc' => "Frequently Asked Questions",
+    'bc_desc' => 'Got questions about your upcoming move? Read our FAQs on packers and movers rates, insurance, shifting processes, and safety guidelines.',
     'breadcrumbs' => [
         ['name' => 'Frequently Asked Questions']
     ]

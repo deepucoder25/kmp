@@ -3,7 +3,7 @@
 <!-- Breadcrumbs Section -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
     'bc_h1' => 'Home Relocation',
-    'bc_desc' => "Home Relocation Services",
+    'bc_desc' => 'Stress-free household shifting and home relocation services by ' . $company3 . '. Expert packing, secure loading, and timely delivery of your household goods.',
     'breadcrumbs' => [
         ['name' => 'Home Relocation']
     ]

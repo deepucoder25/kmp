@@ -6,7 +6,7 @@ $this->load->view('about/dynamic_breadcrumbs', [
     'bc_current' => '',
     'bc_title_white' => 'Office Relocation in',
     'bc_title_orange' => '',
-    'bc_desc' => ''
+    'bc_desc' => 'Professional office relocation and corporate shifting services in ' . $city . ' by ' . $company3 . '. Minimize business downtime with systematic transit.'
 ]); 
 ?>
 

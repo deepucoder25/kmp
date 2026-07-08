@@ -3,7 +3,7 @@
 <!-- Breadcrumbs Section -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
     'bc_h1' => 'Cargo Services',
-    'bc_desc' => "Domestic Cargo & Logistics Services",
+    'bc_desc' => 'Reliable cargo and commercial shipping services by ' . $company3 . '. Affordable logistics, secure packaging, and swift door-to-door bulk cargo delivery.',
     'breadcrumbs' => [
         ['name' => 'Cargo Services']
     ]

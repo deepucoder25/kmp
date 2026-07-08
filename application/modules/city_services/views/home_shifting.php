@@ -6,7 +6,7 @@ $this->load->view('about/dynamic_breadcrumbs', [
     'bc_current' => '',
     'bc_title_white' => 'Home Shifting in',
     'bc_title_orange' => '',
-    'bc_desc' => ''
+    'bc_desc' => 'Hassle-free household shifting and home relocation services in ' . $city . ' by ' . $company3 . '. Expert packaging, secure transit, and door-to-door shifting.'
 ]); 
 ?>
 

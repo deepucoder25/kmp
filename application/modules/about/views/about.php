@@ -4,7 +4,7 @@
 <!-- Breadcrumbs Section -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
     'bc_h1' => 'About Us',
-    'bc_desc' => '',
+    'bc_desc' => 'Learn more about ' . $company3 . ', the leading packing and moving company in India. Discover our history, mission, and professional relocation standards.',
     'breadcrumbs' => [
         ['name' => 'About Us']
     ]

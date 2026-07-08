@@ -3,7 +3,7 @@
 <!-- Breadcrumbs Section -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
     'bc_h1' => 'Warehouse Storage',
-    'bc_desc' => "Warehouse & Storage Services",
+    'bc_desc' => 'Secure household storage and warehouse solutions by ' . $company3 . '. Short-term and long-term warehousing options with 24/7 CCTV surveillance.',
     'breadcrumbs' => [
         ['name' => 'Warehouse Storage']
     ]

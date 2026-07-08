@@ -3,7 +3,7 @@
 <!-- Breadcrumbs Section -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
     'bc_h1' => 'Bike Transportation',
-    'bc_desc' => "Bike Transportation Services",
+    'bc_desc' => 'Professional bike transportation services by ' . $company3 . '. We offer secure packaging, specialized carriers, and damage-free delivery for your two-wheeler in India.',
     'breadcrumbs' => [
         ['name' => 'Bike Transportation']
     ]

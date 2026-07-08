@@ -3,7 +3,7 @@
 <!-- Breadcrumbs Section -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
     'bc_h1' => 'Loading & Unloading',
-    'bc_desc' => "Loading & Unloading Services",
+    'bc_desc' => 'Expert loading and unloading services by ' . $company3 . '. Trained packers ensure damage-free transit, careful handling, and systematic unpacking layout.',
     'breadcrumbs' => [
         ['name' => 'Loading & Unloading']
     ]

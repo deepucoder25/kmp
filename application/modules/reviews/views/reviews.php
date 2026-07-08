@@ -2,7 +2,7 @@
 <!-- Breadcrumbs Section -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
     'bc_h1' => 'Our Reviews',
-    'bc_desc' => 'Read what our customers have to say',
+    'bc_desc' => 'Read real customer reviews and testimonials for ' . $company3 . '. Find out why we are the top-rated choice for home shifting and vehicle relocation.',
     'breadcrumbs' => [
         ['name' => 'Reviews']
     ]

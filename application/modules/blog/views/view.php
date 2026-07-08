@@ -7,7 +7,7 @@ $this->load->view('about/dynamic_breadcrumbs', [
     'bc_current' => '',
     'bc_title_white' => 'Blog',
     'bc_title_orange' => 'Details',
-    'bc_desc' => ''
+    'bc_desc' => 'Explore detailed insights, expert shifting tips, and professional packers and movers advice on our blog detail page.'
 ]); 
 ?>
 

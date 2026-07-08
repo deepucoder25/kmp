@@ -3,7 +3,7 @@
 <!-- Breadcrumbs Section -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
     'bc_h1' => 'Door-to-Door Shifting',
-    'bc_desc' => "Door-to-Door Shifting Services",
+    'bc_desc' => 'Convenient door-to-door shifting and relocation services by ' . $company3 . '. Complete end-to-end logistics solutions, managed professionally from pickup to delivery.',
     'breadcrumbs' => [
         ['name' => 'Door-to-Door Shifting']
     ]

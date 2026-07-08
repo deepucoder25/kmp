@@ -1,7 +1,6 @@
-<!-- Breadcrumbs Section -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
     'bc_h1' => 'Our Branches',
-    'bc_desc' => '',
+    'bc_desc' => 'Explore ' . $company3 . ' network branches. Find local shifting services, booking offices, and contact details for packers and movers near you.',
     'breadcrumbs' => [
         ['name' => 'Our Branches']
     ]

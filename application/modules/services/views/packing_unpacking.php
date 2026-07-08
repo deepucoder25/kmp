@@ -3,7 +3,7 @@
 <!-- Breadcrumbs Section -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
     'bc_h1' => 'Packing & Unpacking',
-    'bc_desc' => "Packing & Unpacking Services",
+    'bc_desc' => 'High-quality packing and unpacking services by ' . $company3 . '. We use premium bubble wraps, heavy-duty cartons, and protective layers for maximum safety.',
     'breadcrumbs' => [
         ['name' => 'Packing & Unpacking']
     ]

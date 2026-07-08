@@ -3,7 +3,7 @@
 <!-- Breadcrumbs Section -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
     'bc_h1' => 'Car Transportation',
-    'bc_desc' => "Car Transportation Services",
+    'bc_desc' => 'Safe and efficient car carrier and transportation services by ' . $company3 . '. Fully insured transit, specialized enclosed trailers, and real-time tracking across India.',
     'breadcrumbs' => [
         ['name' => 'Car Transportation']
     ]

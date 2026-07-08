@@ -6,7 +6,7 @@ $this->load->view('about/dynamic_breadcrumbs', [
     'bc_current' => '',
     'bc_title_white' => 'Car Transportation in',
     'bc_title_orange' => '',
-    'bc_desc' => ''
+    'bc_desc' => 'Secure car carrier and vehicle transportation services in ' . $city . ' by ' . $company3 . '. On-time and fully insured car shifting across India.'
 ]); 
 ?>
 

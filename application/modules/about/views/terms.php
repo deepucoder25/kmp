@@ -4,7 +4,7 @@
 <!-- Breadcrumbs Section -->
 <?php $this->load->view('about/dynamic_breadcrumbs', [
     'bc_h1' => 'Terms and Conditions',
-    'bc_desc' => "Terms and Conditions",
+    'bc_desc' => 'Review our terms of service, shifting policies, and booking guidelines to understand customer rights and insurance protection terms.',
     'breadcrumbs' => [
         ['name' => 'Terms and Conditions']
     ]

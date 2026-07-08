@@ -6,7 +6,7 @@
     <!-- Breadcrumbs Section -->
     <?php $this->load->view('about/dynamic_breadcrumbs', [
         'bc_h1' => 'Blog',
-        'bc_desc' => '',
+        'bc_desc' => 'Read expert shifting tips, relocation guides, and packing hacks on our blog. Stay updated with the latest packers and movers news and advice.',
         'breadcrumbs' => [
             ['name' => 'Blog']
         ]

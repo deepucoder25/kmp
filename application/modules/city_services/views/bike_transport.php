@@ -6,7 +6,7 @@ $this->load->view('about/dynamic_breadcrumbs', [
     'bc_current' => '',
     'bc_title_white' => 'Bike Transportation in',
     'bc_title_orange' => '',
-    'bc_desc' => ''
+    'bc_desc' => 'Professional bike shifting and two-wheeler transportation services in ' . $city . ' by ' . $company3 . '. We ensure scratch-free loading and on-time carrier transit.'
 ]); 
 ?>
 
